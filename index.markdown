@@ -1,6 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+title: Home
+subtitle: This is the perfect theme for developers, designers and other creatives.
+description: Use the Argon Jekyll theme to build a landing page, blog or complete website.
+featured_image: /assets/img/sections/broofoac.jpg
 ---
+
+
+```CHAPTERS ```
+{% include components/teams/team-carousel-1.html %}

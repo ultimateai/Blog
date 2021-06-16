@@ -4,7 +4,7 @@ basic_settings:
 
 header_settings:
   logo_image: /assets/img/brand/logo.svg
-  mobile_logo_image: /assets/img/brand/blue.png
+  mobile_logo_image: /assets/img/brand/logo.svg
   # Choose a color for your header [blue, dark, light].
   theme: dark
   # If the page has a featured image, it turns transparent if allow_transparent is set to "yes".
@@ -14,7 +14,7 @@ home_settings:
   # Choose a layout for your home page:
     # landing – an example landing page made using the Argon design system
     # blog – use your blog posts as the home page
-  theme: blog
+  theme: landing
 
 blog_settings:
   # Choose a format for your blog listings:
@@ -32,13 +32,7 @@ blog_settings:
 menu_settings:
   menu_items:
     - title: 'Home'
-      submenu_items:
-      - title: Landing Page
-        url: /
-        icon: ni-spaceship text-success    
-      - title: Blog
-        url: /blog
-        icon: ni-books text-primary     
+      url: '/'
     - title: 'Blog'
       submenu_items:
       - title: Blog
@@ -55,8 +49,8 @@ menu_settings:
         icon: ni-bullet-list-67 text-default    
     - title: 'About'
       url: '/about'
-    - title: 'Contact'
-      url: '/contact'
+    - title: 'Careers'
+      url: '/careers'
 
 footer_settings:
   footer_tagline: Argon & Jekyll, together at last.

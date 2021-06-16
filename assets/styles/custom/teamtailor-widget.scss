@@ -1,0 +1,25 @@
+// Blog Cards
+
+.teamtailor-jobs-widget_wrapper {
+  width: 100%;
+  display: block;
+};
+.teamtailor-jobs__job {
+  float: left;
+  display: inline-block;
+  width: 31.75%;
+  height: 180px;
+  margin: 0 2.3576515979% 15px 0;
+  border-radius: 2px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  a {
+    margin-top: 67px;
+    font-size: 1.2rem;
+  }
+}
