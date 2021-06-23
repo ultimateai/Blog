@@ -6,3 +6,5 @@ featured_image: /assets/img/sections/team.png
 ---
 
 {% include components/careers/open-positions.html %}
+
+{% include components/careers/career_paths.html %}

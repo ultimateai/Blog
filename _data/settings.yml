@@ -34,21 +34,7 @@ menu_settings:
     - title: 'Home'
       url: '/'
     - title: 'Blog'
-      submenu_items:
-      - title: Blog
-        url: /blog
-        icon: ni-books text-primary
-      - title: Narrow Grid Example
-        url: /blog-narrow-example
-        icon: ni-align-center text-success
-      - title: Wide Grid Example
-        url: /blog-grid-example
-        icon: ni-image text-info
-      - title: List Example
-        url: /blog-list-example
-        icon: ni-bullet-list-67 text-default    
-    - title: 'About'
-      url: '/about'
+      url: '/blog'
     - title: 'Careers'
       url: '/careers'
 
