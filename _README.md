@@ -122,7 +122,7 @@ This is the blog listing page, which shows all your blog posts. You can edit the
 
 #### Sample Content and Other Pages
 
-We have included some example pages in `_pages` to help you get started and easily see how the included components are displayed.  
+We have included some example pages in `_pages` to help you get started and easily see how the included components are displayed.
 
 You may delete them or modify them to suit your needs.  You can edit some details in the Front Matter at the top of the page:
 
