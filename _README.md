@@ -89,6 +89,15 @@ Make sure the name of the author of the post matches the author name field exact
 
 ---
 
+### CSS Overrides
+
+Inside the `/assets/styles/custom/` folder you'll find a few SASS files which contain Ultimate theme overrides.
+
+`assets/styles/custom/_variables.scss` contains all variables the Argo Theme provides. They already are customized to the Ultimate brand. If you need to change or define any other variables, this is the place to do so.
+`assets/styles/custom/_styles.scss` does the same as above just for CSS styles. You can use all SASS specific syntaxes as well as all variables defined in the file mantioned above!
+`assets/styles/custom/teamtailor-widget.scss` contains style overrides for our teamtailor widget embedded in the career page.
+---
+
 ### Images
 
 Inside the `/assets/img/` folder you'll find a few images included with the theme.
