@@ -17,3 +17,25 @@
         max-height: 280px;
     }
 }
+
+.icon-shape-default {
+    background: $default;
+    color: $white;
+}
+
+
+
+.header-1 {
+    max-height: 900px;
+    & .page-header {
+        height: 100vh;
+        max-height: 800px;
+        & > .container {
+            // padding-top: 0;
+        }
+        & .home-header-image {
+            background-size: 660px;
+            background-position: right 0 top 84px;
+        }
+    }
+}
