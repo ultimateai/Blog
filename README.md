@@ -1,18 +1,16 @@
 # ultimateai.github.io
 
+The Ultimate tech blog repo. Instructions are below.
+
+---
 ## Setup
 
-You need to have Ruby 2.7.3 installed. Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies. If Bundler is not installed yet, you can do so by running `gem install bundler`.
-Then run `jekyll serve` to start the Jekyll server.
 
-## Further reading about Jekyll and Markdown
-
-If you're not familiar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), and [creating pages](https://jekyllrb.com/docs/pages/).
-
-# Theme Overview
+You need to have Ruby 2.7.3 installed. Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies. If Bundler is not installed yet, you can do so by running `gem install bundler`. Then run `jekyll serve` to start the Jekyll server.
 
 We use a customized theme called Argo Pro. This theme is a collaboration between [Creative Tim](https://creative-tim.com) and [Jekyll Themes](https://jekyllthemes.io).
 
+---
 
 ## Customizing the theme
 
@@ -87,11 +85,22 @@ Make sure the name of the author of the post matches the author name field exact
 
 ---
 
+### CSS Overrides
+
+Inside the `/assets/styles/custom/` folder you'll find a few SASS files which contain Ultimate theme overrides.
+
+`assets/styles/custom/_variables.scss` contains all variables the Argo Theme provides. They already are customized to the Ultimate brand. If you need to change or define any other variables, this is the place to do so.
+`assets/styles/custom/_styles.scss` does the same as above just for CSS styles. You can use all SASS specific syntaxes as well as all variables defined in the file mantioned above!
+`assets/styles/custom/teamtailor-widget.scss` contains style overrides for our teamtailor widget embedded in the career page.
+---
+
 ### Images
 
 Inside the `/assets/img/` folder you'll find a few images included with the theme.
 
 `favicon.png` – you should replace this with the favicon image you'd like to use for your website.
+
+Also we moved all brand related images into the `/assets/img/brand` folder.
 
 ---
 
