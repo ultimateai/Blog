@@ -31,11 +31,21 @@
         height: 100vh;
         max-height: 800px;
         & > .container {
-            // padding-top: 0;
+            padding-top: 280px;
         }
         & .home-header-image {
             background-size: 660px;
             background-position: right 0 top 84px;
         }
     }
+}
+
+.carousel-team .carousel-control-prev {
+    top: 110%;
+    left: 40% !important;
+}
+
+.carousel-team .carousel-control-next {
+    top: 110%;
+    left: 60% !important;
 }
