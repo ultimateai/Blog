@@ -104,6 +104,8 @@ Inside the `/assets/img/` folder you'll find a few images included with the them
 
 `favicon.png` – you should replace this with the favicon image you'd like to use for your website.
 
+Also we moved all brand related images into the `/assets/img/brand` folder.
+
 ---
 
 ## Main pages
