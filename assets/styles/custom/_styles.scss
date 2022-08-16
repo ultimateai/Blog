@@ -1,12 +1,26 @@
 // Bootstrap Functions
 @import "teamtailor-widget";
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @font-face {
     font-family: 'manrope';
     src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
 }
+
+.highlight pre code {
+    font-family: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-weight: 350;
+}
+
+@supports (font-variation-settings: normal) {
+    .highlight pre code {
+        font-family: 'Fira Code VF', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-weight: 350;
+    }
+}
+
 
 .page-header {
     h2 {
