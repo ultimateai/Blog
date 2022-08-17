@@ -9,6 +9,13 @@
     font-stretch: 25% 151%;
 }
 
+body {
+    color: $primaryText;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $default;
+}
+
 // Simple code highlight if nothing specific is defined for a codeblock
 .highlight{
     .hll { background-color: #ffffcc }
