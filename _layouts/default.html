@@ -1,3 +1,7 @@
+---
+layout: html_minifier
+---
+
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
@@ -34,16 +38,12 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="{{ "/assets/styles/styles.css" | relative_url }}" rel="stylesheet">
 
-  {% if site.data.settings.advanced_settings.analytics_code %}
-  <!-- Analytics Code -->
-  {{ site.data.settings.advanced_settings.analytics_code }}
-  {% endif %}
-
+  <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   {% if site.data.settings.advanced_settings.header_js %}
-  <!-- Extra Header JS Code -->
-  {{ site.data.settings.advanced_settings.header_js }}
+    <!-- Extra Header JS Code -->
+    {{ site.data.settings.advanced_settings.header_js }}
   {% endif %}
-
 </head>
 
 <body>
@@ -89,10 +89,10 @@
   {% if site.data.settings.advanced_settings.footer_js %}
   <!-- Extra Footer JS Code --> {{ site.data.settings.advanced_settings.footer_js }}
   {% endif %}
-
-</body>
-
-</html>
+  {% if site.data.settings.advanced_settings.analytics_code %}
+    <!-- Analytics Code -->
+    {{ site.data.settings.advanced_settings.analytics_code }}
+  {% endif %}
 </body>
 
 </html>

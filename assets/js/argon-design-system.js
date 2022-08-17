@@ -1,19 +1,7 @@
-/*!
-
- =========================================================
- * Argon Design System Pro - v1.0.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/argon-design-system-pro
- * Copyright 2019 Creative Tim (http://www.creative-tim.com)
-
- * Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
+---
+layout: js_minifier
+replace_names: false
+---
 
 
 var transparent = true;
@@ -31,11 +19,24 @@ var $collapse = $('.navbar .collapse');
 var $html = $('html');
 var $tagsinput = $('.tagsinput');
 
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    }, wait);
+    if (immediate && !timeout) func.apply(context, args);
+  };
+};
+
 (function() {
   var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
   if (isWindows) {
-    // if we are on windows OS we activate the perfectScrollbar function
 
     $('.wrapper .login-page, .register-page, .card').perfectScrollbar();
 
@@ -54,9 +55,6 @@ var $tagsinput = $('.tagsinput');
 })();
 
 $(document).ready(function() {
-
-  // Multilevel Dropdown menu
-
   $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
     var $el = $(this);
     var $parent = $(this).offsetParent(".dropdown-menu");
@@ -82,20 +80,16 @@ $(document).ready(function() {
     return false;
   });
 
-  //
-  // Form control
-  //
 
   'use strict';
 
   var FormControl = (function() {
 
-    // Variables
 
     var $input = $('.form-control');
 
 
-    // Methods
+
 
     function init($this) {
       $this.on('focus blur', function(e) {
@@ -104,7 +98,6 @@ $(document).ready(function() {
     }
 
 
-    // Events
 
     if ($input.length) {
       init($input);
@@ -112,21 +105,8 @@ $(document).ready(function() {
 
   })();
 
-  // Datepicker
-  flatpickr('.flatpickr', {});
 
-  // Datepicker - range
-  flatpickr('.range', {
-    mode: "range"
-  });
 
-  // DateTimePicker
-  flatpickr('.datetimepicker', {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-  });
-
-  // Headroom - show/hide navbar on scroll
   if ($('.headroom')[0]) {
     var headroom = new Headroom(document.querySelector("#navbar-main"), {
       offset: 300,
@@ -139,7 +119,7 @@ $(document).ready(function() {
   }
 
   if ($('#choices-single-default')[0]) {
-    // Activate Choices
+
     new Choices('#choices-single-default', {
       search: false,
     });
@@ -154,7 +134,7 @@ $(document).ready(function() {
   }
 
   if ($('#badges')[0]) {
-    // Activate Tags
+
     new Choices('#badges', {
       delimiter: ',',
       editItems: true,
@@ -164,29 +144,13 @@ $(document).ready(function() {
     });
   }
 
-  // Activate Sliders
-  ArgonKit.initSliders();
-
-  // Tooptips
-  $(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
-  //
-  // Popover
-  //
 
   'use strict';
 
   var Popover = (function() {
 
-    // Variables
-
     var $popover = $('[data-toggle="popover"]'),
       $popoverClass = '';
-
-
-    // Methods
 
     function init($this) {
       if ($this.data('color')) {
@@ -201,9 +165,6 @@ $(document).ready(function() {
       $this.popover(options);
     }
 
-
-    // Events
-
     if ($popover.length) {
       $popover.each(function() {
         init($(this));
@@ -212,8 +173,6 @@ $(document).ready(function() {
 
 
   })();
-
-  // Back to top button
 
   var btn = $('.back-to-top');
 
@@ -245,8 +204,6 @@ $(document).on('click', '.card-rotate .btn-rotate', function() {
 });
 
 
-// Add (+/-) Button Number Incrementers
-
 function up(max) {
   document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
   if (document.getElementById("myNumber").value >= parseInt(max)) {
@@ -261,9 +218,6 @@ function down(min) {
   }
 }
 
-// $(window).on('resize', function(){
-//     ArgonKit.initNavbarImage();
-// });
 
 var didScroll;
 
@@ -288,7 +242,6 @@ ArgonKit = {
 
 
   initSliders: function() {
-    // Sliders for demo purpose in refine cards section
     var slider = document.getElementById('sliderRegular');
 
     if (slider) {
@@ -314,264 +267,5 @@ ArgonKit = {
         }
       });
     }
-  },
-
-  initGoogleMaps: function() {
-    var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions = {
-      zoom: 13,
-      center: myLatlng,
-      scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-      styles: [{
-          "featureType": "administrative",
-          "elementType": "labels.text.fill",
-          "stylers": [{
-            "color": "#444444"
-          }]
-        },
-        {
-          "featureType": "landscape",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#f2f2f2"
-          }]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "road",
-          "elementType": "all",
-          "stylers": [{
-            "saturation": -100
-          }, {
-            "lightness": 45
-          }]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "simplified"
-          }]
-        },
-        {
-          "featureType": "road.arterial",
-          "elementType": "labels.icon",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "transit",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "water",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#C5CBF5"
-          }, {
-            "visibility": "on"
-          }]
-        }
-      ]
-    };
-
-    var map = new google.maps.Map(document.getElementById("map-contactus-1"), mapOptions);
-
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      title: "Hello World!"
-    });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
-  },
-
-  initGoogleMaps2: function() {
-    var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions = {
-      zoom: 13,
-      center: myLatlng,
-      scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-      styles: [{
-          "featureType": "administrative",
-          "elementType": "labels.text.fill",
-          "stylers": [{
-            "color": "#444444"
-          }]
-        },
-        {
-          "featureType": "landscape",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#f2f2f2"
-          }]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "road",
-          "elementType": "all",
-          "stylers": [{
-            "saturation": -100
-          }, {
-            "lightness": 45
-          }]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "simplified"
-          }]
-        },
-        {
-          "featureType": "road.arterial",
-          "elementType": "labels.icon",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "transit",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "water",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#C5CBF5"
-          }, {
-            "visibility": "on"
-          }]
-        }
-      ]
-    };
-
-    var map = new google.maps.Map(document.getElementById("map-contactus-2"), mapOptions);
-
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      title: "Hello World!"
-    });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
-  },
-
-  initGoogleMaps3: function() {
-    var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions = {
-      zoom: 13,
-      center: myLatlng,
-      scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-      styles: [{
-          "featureType": "administrative",
-          "elementType": "labels.text.fill",
-          "stylers": [{
-            "color": "#444444"
-          }]
-        },
-        {
-          "featureType": "landscape",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#f2f2f2"
-          }]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "road",
-          "elementType": "all",
-          "stylers": [{
-            "saturation": -100
-          }, {
-            "lightness": 45
-          }]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "simplified"
-          }]
-        },
-        {
-          "featureType": "road.arterial",
-          "elementType": "labels.icon",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "transit",
-          "elementType": "all",
-          "stylers": [{
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "water",
-          "elementType": "all",
-          "stylers": [{
-            "color": "#C5CBF5"
-          }, {
-            "visibility": "on"
-          }]
-        }
-      ]
-    };
-
-    var map = new google.maps.Map(document.getElementById("map-contactus-3"), mapOptions);
-
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      title: "Hello World!"
-    });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
   }
 }
-
-// Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function() {
-    var context = this,
-      args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    }, wait);
-    if (immediate && !timeout) func.apply(context, args);
-  };
-};
