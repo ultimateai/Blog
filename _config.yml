@@ -1,7 +1,7 @@
 site: Ultimate.ai Tech Blog
 
 url: https://tech.ultimate.ai
-baseurl: 
+baseurl:
 
 collections:
   pages:
@@ -29,12 +29,22 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post" 
+      layout: "post"
 
 sass:
   sass_dir: assets/styles
   style: compressed
   sourcemap: never
+
+compress_html:
+  clippings: []
+  comments: ["<!--", "-->"]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
 
 plugins:
   - jekyll-paginate
@@ -42,4 +52,3 @@ plugins:
 
 paginate: 6
 paginate_path: "/blog/page:num/"
-  

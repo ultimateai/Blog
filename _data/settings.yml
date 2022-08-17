@@ -37,6 +37,8 @@ menu_settings:
       url: '/blog'
     - title: 'Careers'
       url: '/careers'
+    - title: 'About'
+      url: '/about'
 
 footer_settings:
   footer_tagline: Argon & Jekyll, together at last.
