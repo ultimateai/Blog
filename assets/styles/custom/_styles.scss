@@ -1,11 +1,60 @@
 // Bootstrap Functions
 @import "teamtailor-widget";
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @font-face {
     font-family: 'manrope';
     src: url('/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+}
+
+// Simple code highlight if nothing specific is defined for a codeblock
+.highlight{
+    .hll { background-color: #ffffcc }
+    .c { color: #008000 } /* Comment */
+    .err { border: 1px solid #FF0000 } /* Error */
+    .k { color: #0000ff } /* Keyword */
+    .cm { color: #008000 } /* Comment.Multiline */
+    .cp { color: #0000ff } /* Comment.Preproc */
+    .c1 { color: #008000 } /* Comment.Single */
+    .cs { color: #008000 } /* Comment.Special */
+    .ge { font-style: italic } /* Generic.Emph */
+    .gh { font-weight: bold } /* Generic.Heading */
+    .gp { font-weight: bold } /* Generic.Prompt */
+    .gs { font-weight: bold } /* Generic.Strong */
+    .gu { font-weight: bold } /* Generic.Subheading */
+    .kc { color: #0000ff } /* Keyword.Constant */
+    .kd { color: #0000ff } /* Keyword.Declaration */
+    .kn { color: #0000ff } /* Keyword.Namespace */
+    .kp { color: #0000ff } /* Keyword.Pseudo */
+    .kr { color: #0000ff } /* Keyword.Reserved */
+    .kt { color: #2b91af } /* Keyword.Type */
+    .s { color: #a31515 } /* Literal.String */
+    .nc { color: #2b91af } /* Name.Class */
+    .ow { color: #0000ff } /* Operator.Word */
+    .sb { color: #a31515 } /* Literal.String.Backtick */
+    .sc { color: #a31515 } /* Literal.String.Char */
+    .sd { color: #a31515 } /* Literal.String.Doc */
+    .s2 { color: #a31515 } /* Literal.String.Double */
+    .se { color: #a31515 } /* Literal.String.Escape */
+    .sh { color: #a31515 } /* Literal.String.Heredoc */
+    .si { color: #a31515 } /* Literal.String.Interpol */
+    .sx { color: #a31515 } /* Literal.String.Other */
+    .sr { color: #a31515 } /* Literal.String.Regex */
+    .s1 { color: #a31515 } /* Literal.String.Single */
+    .ss { color: #a31515 } /* Literal.String.Symbol */
+    pre code {
+        font-family: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-weight: 350;
+    }
+}
+
+@supports (font-variation-settings: normal) {
+    .highlight pre code {
+        font-family: 'Fira Code VF', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-weight: 350;
+    }
 }
 
 .page-header {
@@ -21,6 +70,14 @@
 .icon-shape-default {
     background: $default;
     color: $white;
+}
+
+.carousel {
+    &.carousel-team {
+        &.slide {
+            margin: 0 0 100px;
+        }
+    }
 }
 
 
@@ -41,11 +98,45 @@
 }
 
 .carousel-team .carousel-control-prev {
-    top: 110%;
-    left: 40% !important;
+    top: 30%;
+    left: 0% !important;
 }
 
 .carousel-team .carousel-control-next {
-    top: 110%;
-    left: 60% !important;
+    top: 30%;
+    left: 100% !important;
+}
+
+.btn-primary {
+    background: $black;
+    border: none;
+    height: 48px;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    border-radius: 100px;
+    padding: 12px 28px;
+    text-transform: none;
+}
+
+.blog-mini-header {
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: none;
+}
+
+@media (min-width: 991.98px) {
+    .header-1 .page-header {
+        height: 200vh;
+        max-height: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    section.team-1 {
+        display: none;
+    }
+    .header-1 .page-header {
+        height: 100vh;
+        max-height: 800px;
+    }
 }

@@ -4,11 +4,11 @@ type: blogListing
 title: Blog
 subtitle: The latest posts from our blog
 description: My random thoughts...
-featured_image: /assets/img/sections/photo-1.jpg
+featured_image: /assets/img/brand/DSC07576-Edit.jpg
 ---
 
 {% if site.data.settings.blog_settings.theme == "narrow" %}
-<div class="page-header page-header-mini bg-secondary fullWidth" style="background-image: url({{ page.featured_image | relative_url }})">
+<div class="page-header page-header-mini bg-secondary fullWidth blog-mini-header header-filter" style="background-image: url({{ page.featured_image | relative_url }})">
     <div class="container contentWrapper">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center pt-4">
@@ -26,7 +26,7 @@ featured_image: /assets/img/sections/photo-1.jpg
 {% endif %}
 
 {% if site.data.settings.blog_settings.theme == "basic" %}
-<div class="page-header page-header-mini bg-secondary fullWidth" style="background-image: url({{ page.featured_image | relative_url }})">
+<div class="page-header page-header-mini bg-secondary fullWidth blog-mini-header header-filter" style="background-image: url({{ page.featured_image | relative_url }})">
     <div class="container contentWrapper">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center pt-4">
@@ -44,7 +44,7 @@ featured_image: /assets/img/sections/photo-1.jpg
 {% endif %}
 
 {% if site.data.settings.blog_settings.theme == "grid" %}
-<div class="page-header page-header-mini bg-secondary fullWidth ">
+<div class="page-header page-header-mini bg-secondary fullWidth blog-mini-header header-filter">
     <div class="container contentWrapper">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center pt-4">
