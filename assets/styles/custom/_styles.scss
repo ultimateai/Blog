@@ -38,6 +38,15 @@
 }
 
 
+.carousel {
+    &.carousel-team {
+        &.slide {
+            margin: 0 0 100px;
+        }
+    }
+}
+
+
 
 .header-1 {
     max-height: 900px;
@@ -55,13 +64,13 @@
 }
 
 .carousel-team .carousel-control-prev {
-    top: 110%;
-    left: 40% !important;
+    top: 30%;
+    left: 0% !important;
 }
 
 .carousel-team .carousel-control-next {
-    top: 110%;
-    left: 60% !important;
+    top: 30%;
+    left: 100% !important;
 }
 
 .btn-primary {
@@ -73,4 +82,21 @@
     border-radius: 100px;
     padding: 12px 28px;
     text-transform: none;
+}
+
+@media (min-width: 991.98px) {
+    .header-1 .page-header {
+        height: 200vh;
+        max-height: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    section.team-1 {
+        display: none;
+    }
+    .header-1 .page-header {
+        height: 100vh;
+        max-height: 800px;
+    }
 }
