@@ -7,7 +7,7 @@
   }
 
   .carousel-inner {
-    height: $card-background-height-lg;
+    height: auto;
 
     .title {
       text-align: right;
@@ -39,6 +39,10 @@
 
       .lead {
         padding: 10px 30px 30px;
+      }
+
+      p.lead {
+        padding: 10px 30px 20px 0px;
       }
 
       .footer {
