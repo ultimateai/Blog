@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83fce55d-3350-48ed-9adf-0dce9a79084d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_includes/components/about/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/components/about/team-structure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/components/about/values-and-way-of-working.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/faces/faces_andras.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/faces/ian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/faces/luisa-and-miko.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/sections/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/sections/careers.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/careers.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/careers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2022-05-20-mobile-checkout-now-available.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-05-20-mobile-checkout-now-available.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/ashim.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/athena.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/austin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/broofoac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/careers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/chrisa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/damian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/dane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/mark-harrison.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/mohamed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/odin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/pawel-nolbert.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/photo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/team.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/thomas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/twk-tt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/sections/unsplashs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/bootstrap/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/bootstrap/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/theme/section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/theme/section.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XHTML File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1riAGYTs5GnxGzmIYFUKy1P71XA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_includes/components/about" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img" />
+      <recent name="$PROJECT_DIR$/assets/img/faces" />
+      <recent name="$PROJECT_DIR$/assets/img/sections" />
+      <recent name="$PROJECT_DIR$/assets/styles/custom" />
+      <recent name="$PROJECT_DIR$/_includes/components/teams" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_includes/components/about" />
+      <recent name="$PROJECT_DIR$/_includes/components/careers" />
+      <recent name="$PROJECT_DIR$/_includes/components/teams" />
+      <recent name="$PROJECT_DIR$/_includes/components/blog" />
+      <recent name="$PROJECT_DIR$/assets/styles/theme" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83fce55d-3350-48ed-9adf-0dce9a79084d" name="Default Changelist" comment="" />
+      <created>1619448441460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619448441460</updated>
+      <workItem from="1619448442525" duration="1569000" />
+      <workItem from="1621520443091" duration="253000" />
+      <workItem from="1621608103420" duration="570000" />
+      <workItem from="1622565981351" duration="513000" />
+      <workItem from="1622625901546" duration="1850000" />
+      <workItem from="1622708435218" duration="57000" />
+      <workItem from="1623685547269" duration="5834000" />
+      <workItem from="1623831150143" duration="4635000" />
+      <workItem from="1624030796877" duration="1843000" />
+      <workItem from="1624440096196" duration="5460000" />
+      <workItem from="1624518076496" duration="774000" />
+      <workItem from="1635776982908" duration="1231000" />
+      <workItem from="1635931942974" duration="598000" />
+      <workItem from="1671703235919" duration="7955000" />
+      <workItem from="1671712741206" duration="12388000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="217" width="804" height="606" key="find.popup" timestamp="1671729376616">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="421" y="217" width="804" height="606" key="find.popup/0.25.1440.875/-651.-1415.2560.1415@0.25.1440.875" timestamp="1671729376616" />
+  </component>
+</project>

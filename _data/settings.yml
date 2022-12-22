@@ -35,13 +35,13 @@ menu_settings:
       url: '/'
     - title: 'Blog'
       url: '/blog'
-    - title: 'Careers'
-      url: '/careers'
     - title: 'About'
       url: '/about'
+    - title: 'Careers'
+      url: '/careers'
 
 footer_settings:
-  footer_tagline: Argon & Jekyll, together at last.
+  footer_tagline: ''
 
 contact_settings:
   form_action: '/contact'
@@ -64,15 +64,9 @@ social_settings:
   linkedin_url: 'https://www.linkedin.com/company/ultimate.ai/'
 
 authors:
-  tom:
-    name: Tom
-    picture: /assets/img/faces/team-1.jpg
-  jane:
-    name: Jane
-    picture: /assets/img/faces/team-4.jpg
-  michael:
-    name: Michael
-    picture: /assets/img/faces/michael.jpg
+  andras:
+    name: Andras
+    picture: /assets/img/faces/faces_andras.jpg
 
 advanced_settings:
   analytics_code:
