@@ -8,5 +8,7 @@ featured_image: /assets/img/sections/about.jpg
 
 {% include components/about/team-structure.html %}
 
+<!-- {% include components/teams/chapter-carousel.html %} -->
+
 {% include components/about/values-and-way-of-working.html %}
 

@@ -67,9 +67,11 @@ authors:
   andras:
     name: András Beke
     picture: /assets/img/faces/faces_andras.jpg
+  franzi:
+      name: Franziska Hempel
   mohamed:
     name: Mohamed Abdelazim
-    picture: /assets/img/faces/faces_mohamed.jpg
+    picture: /assets/img/faces/faces_mohamed.jpeg
 
 advanced_settings:
   analytics_code:

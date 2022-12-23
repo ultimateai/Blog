@@ -20,40 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83fce55d-3350-48ed-9adf-0dce9a79084d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_includes/components/about/product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/components/about/team-structure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/components/about/values-and-way-of-working.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/faces/faces_andras.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/faces/ian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/faces/luisa-and-miko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/sections/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/sections/careers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2023-01-20-enhancing-bot-deletion-through-an-event-driven-setup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_data/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/settings.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/home-sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/home-sample.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_pages/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/about.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pages/careers.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/careers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-05-20-mobile-checkout-now-available.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-05-20-mobile-checkout-now-available.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/ashim.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/athena.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/austin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/broofoac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/careers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/chrisa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/damian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/dane.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/mark-harrison.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/mohamed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/odin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/pawel-nolbert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/photo-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/team.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/thomas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/twk-tt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sections/unsplashs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/bootstrap/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/bootstrap/_type.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/theme/section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/theme/section.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-05-20-mobile-checkout-now-available.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-12-20-why-performance-reviews-suck.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-04-20-welcome-to-jekyll.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2022-04-20-welcome-to-jekyll.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2022-05-20-mobile-checkout-now-available.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-11-20-language-detection-tips-and-tricks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/brand/blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/brand/creativetim-black-slim.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,23 +58,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_includes/components/about" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/img" />
-      <recent name="$PROJECT_DIR$/assets/img/faces" />
-      <recent name="$PROJECT_DIR$/assets/img/sections" />
-      <recent name="$PROJECT_DIR$/assets/styles/custom" />
-      <recent name="$PROJECT_DIR$/_includes/components/teams" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_includes/components/about" />
       <recent name="$PROJECT_DIR$/_includes/components/careers" />
       <recent name="$PROJECT_DIR$/_includes/components/teams" />
       <recent name="$PROJECT_DIR$/_includes/components/blog" />
-      <recent name="$PROJECT_DIR$/assets/styles/theme" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img/faces" />
+      <recent name="$PROJECT_DIR$/assets/img/pages" />
+      <recent name="$PROJECT_DIR$/assets/img" />
+      <recent name="$PROJECT_DIR$/assets/img/sections" />
+      <recent name="$PROJECT_DIR$/assets/styles/custom" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -121,7 +99,8 @@
       <workItem from="1635776982908" duration="1231000" />
       <workItem from="1635931942974" duration="598000" />
       <workItem from="1671703235919" duration="7955000" />
-      <workItem from="1671712741206" duration="12388000" />
+      <workItem from="1671712741206" duration="13371000" />
+      <workItem from="1671786907173" duration="7361000" />
     </task>
     <servers />
   </component>
@@ -141,9 +120,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="217" width="804" height="606" key="find.popup" timestamp="1671729376616">
+    <state x="0" y="25" width="1440" height="875" key="FileDocumentManager.FileCacheConflict" timestamp="1671798617938">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="421" y="217" width="804" height="606" key="find.popup/0.25.1440.875/-651.-1415.2560.1415@0.25.1440.875" timestamp="1671729376616" />
+    <state x="0" y="25" width="1440" height="875" key="FileDocumentManager.FileCacheConflict/0.25.1440.875/-251.-1055.1920.1055@0.25.1440.875" timestamp="1671798617938" />
+    <state x="421" y="217" width="804" height="606" key="find.popup" timestamp="1671812016529">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="421" y="217" width="804" height="606" key="find.popup/0.25.1440.875/-251.-1055.1920.1055@0.25.1440.875" timestamp="1671797616494" />
+    <state x="421" y="217" width="804" height="606" key="find.popup/0.25.1440.875/-651.-1415.2560.1415@0.25.1440.875" timestamp="1671812016529" />
   </component>
 </project>
