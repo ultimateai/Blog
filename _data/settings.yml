@@ -65,8 +65,11 @@ social_settings:
 
 authors:
   andras:
-    name: Andras
+    name: András Beke
     picture: /assets/img/faces/faces_andras.jpg
+  mohamed:
+    name: Mohamed Abdelazim
+    picture: /assets/img/faces/faces_mohamed.jpg
 
 advanced_settings:
   analytics_code:
