@@ -6,7 +6,7 @@ header_settings:
   logo_image: /assets/img/brand/logo.svg
   mobile_logo_image: /assets/img/brand/logo.svg
   # Choose a color for your header [blue, dark, light].
-  theme: dark
+  theme: light
   # If the page has a featured image, it turns transparent if allow_transparent is set to "yes".
   allow_transparent: "yes"
 
@@ -14,7 +14,7 @@ home_settings:
   # Choose a layout for your home page:
     # landing – an example landing page made using the Argon design system
     # blog – use your blog posts as the home page
-  theme: landing
+  theme: blog
 
 blog_settings:
   # Choose a format for your blog listings:
@@ -31,14 +31,12 @@ blog_settings:
   # 3. Add a color of the icon - text-primary, text-success, text-info, text-danger, text-warning and text-default all work!
 menu_settings:
   menu_items:
-    - title: 'Home'
-      url: '/'
     - title: 'Blog'
-      url: '/blog'
+      url: '/'
+    - title: 'About Us'
+      url: '/about'
     - title: 'Careers'
       url: '/careers'
-    - title: 'About'
-      url: '/about'
 
 footer_settings:
   footer_tagline: Argon & Jekyll, together at last.
@@ -50,7 +48,9 @@ contact_settings:
   send_button_text: 'Send Message'
 
 social_settings:
-  facebook_url: 'https://www.facebook.com/ultiai'
+  github_url: 'https://github.com/ultimateai'
+  linkedin_url: 'https://www.linkedin.com/company/ultimate.ai/mycompany/'
+  facebook_url: ''
   twitter_url: 'https://twitter.com/ultiai'
   instagram_url: ''
   youtube_url: 'https://www.youtube.com/channel/UCG5VvY2B3_au8MQffPfClow'
@@ -59,9 +59,8 @@ social_settings:
   tumblr_url: ''
   dribbble_url: ''
   behance_url: ''
-  github_url: 'https://github.com/ultimateai'
   reddit_url: ''
-  linkedin_url: 'https://www.linkedin.com/company/ultimate.ai/'
+
 
 authors:
   tom:
