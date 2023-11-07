@@ -10,14 +10,17 @@
     &.card-blog {
       .card-title {
         margin-bottom: .5rem;
+
+        a {
+          color: $black;
+        }
       }
 
       .author {
         position: relative;
-        display: inline-block;
+        display: block;
         text-align: left;
-        margin: 20px auto 0;
-        float:left;
+        margin: 12px auto;
 
         .avatar {
           width: 40px;
