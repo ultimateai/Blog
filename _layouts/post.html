@@ -12,13 +12,19 @@ layout: default
     <div class="row">
       <div class="floating-box bg-default">
         <div class="box text-center">
-          <div class="icon icon-shape bg-primary icon-xl rounded-circle text-white">
-            <i class="ni ni-book-bookmark"></i>
-          </div>
+          {% for author in site.data.settings.authors %}
+          {% if page.author == author[1].name %}
+          <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-xl img-raised">
+          {% endif %}
+          {% endfor %}
         </div>
+        {% for author in site.data.settings.authors %}
+        {% if page.author == author[1].name %}
         <blockquote class="blockquote text-center mt-2">
-          <p class="mb-0 text-white">Posted {{ page.date | date_to_long_string }}</p>
+          <p class="mb-0 text-white">{{ author[1].name}}, {{author[1].role}}</p>
         </blockquote>
+        {% endif %}
+        {% endfor %}
         <h2 class="lead text-white pl-5 pr-5 pb-5 text-center">{{page.description}}</h2>
       </div>
     </div>
@@ -29,7 +35,6 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-8 ml-auto mr-auto">
-        <h6 class="category">{{ page.date | date_to_long_string }}</h6>
         <h3 class="title">{{ page.title }}</h3>
         <article class="blog-post">
           {{ page.content }}
@@ -47,9 +52,6 @@ layout: default
     <h2 class="title mb-5">You might also like...</h2>
 
     {% assign psize = site.posts | size %}
-    {% if psize == 0 %}
-    <p>No posts...yet.</p>
-    {% endif %}
     <div class="row align-items-center mb-2">
 
       {% for post in site.posts limit:6 %}
@@ -59,8 +61,14 @@ layout: default
           <a href="{{ post.url | relative_url }}">
             <div class="card-body">
               <div class="content-bottom">
-                <h6 class="card-category text-white opacity-8">{{ post.date | date_to_long_string }}
+                {% for author in site.data.settings.authors %}
+                {% if post.author == author[1].name %}
+                <h6 class="card-category text-white opacity-8">
+                  {{ author[1].name}}
                 </h6>
+                {% endif %}
+                {% endfor %}
+
                 <h5 class="card-title">{{ post.title }}</h5>
               </div>
             </div>

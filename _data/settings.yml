@@ -4,6 +4,7 @@ basic_settings:
 
 header_settings:
   logo_image: /assets/img/brand/logo.svg
+  logo_image_dark_mode: /assets/img/brand/logo_white.svg
   mobile_logo_image: /assets/img/brand/logo.svg
   # Choose a color for your header [blue, dark, light].
   theme: light
