@@ -1,5 +1,5 @@
 .footer {
-    background: $secondary;
+    background: $black;
     padding: 1.5rem 0;
 
     .col-footer {
@@ -15,10 +15,11 @@
 
     .nav .nav-item .nav-link,
     .footer-link {
-        color: $footer-link-color !important;
+        color: $white !important;
+        opacity: 0.5;
 
         &:hover {
-            color: $footer-link-hover-color !important;
+            color: $primary !important;
         }
     }
 
@@ -34,7 +35,9 @@
     }
 
     .copyright {
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
+        color: $white;
+        opacity: 0.5;
     }
 
     .dropdown {

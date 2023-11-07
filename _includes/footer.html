@@ -1,34 +1,13 @@
 <footer class="footer mt-5 pt-4">
   <div class="container">
-    <div class="row row-grid align-items-center mb-2 mt-2">
-      <div class="col-lg-6">
-        <h4 class="mb-0 font-weight-light">{{ site.data.settings.footer_settings.footer_tagline }}</h4>
-      </div>
-      <div class="col-lg-6 text-lg-right">
-        {% include socials.html %}
-      </div>
-    </div>
-    <hr>
     <div class="row align-items-center justify-content-md-between">
       <div class="col-md-6">
         <div class="copyright">
-          <span> © {{ 'now' | date: "%Y" }} Argon Design System by <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> & <a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a></span>
+          <span> © {{ 'now' | date: "%Y" }} Ultimate.</span>
         </div>
       </div>
-      <div class="col-md-6">
-        <ul class="nav nav-footer justify-content-end">
-          {% for item in site.data.settings.menu_settings.menu_items %}
-          {% if item.submenu_items %}
-
-          {% else %}
-          <li class="nav-item">
-            <a href="{{ item.url | relative_url }}" class="nav-link">
-              <span class="nav-link-inner--text">{{ item.title }}</span>
-            </a>
-          </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
+      <div class="col-md-6 text-lg-right">
+        {% include socials.html %}
       </div>
     </div>
   </div>
@@ -37,12 +16,12 @@
 
 
 <!--   Core JS Files   -->
-<script src="{{ "/assets/js/core/jquery.min.js" | relative_url }}" type="text/javascript"></script>
-<script src="{{ "/assets/js/core/bootstrap.min.js" | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/core/jquery.min.js' | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/core/bootstrap.min.js' | relative_url }}" type="text/javascript"></script>
 <!--  Plugin for the Carousel, full documentation here: http://jedrzejchalubek.com/ -->
-<script src="{{ "/assets/js/plugins/glide.js"" | relative_url }}" type="text/javascript"></script>ript>
+<script src="{{ '/assets/js/plugins/glide.js' | relative_url }}" type="text/javascript"></script>
 <!-- Plugin for Headrom, full documentation here: https://wicky.nillia.ms/headroom.js/ -->
-<script src="{{ "/assets/js/plugins/headroom.min.js" | relative_url }}"></script>
+<script src="{{ '/assets/js/plugins/headroom.min.js' | relative_url }}"></script>
 <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
 
 <script>
@@ -84,13 +63,13 @@
 <script>
   $(function () {
     var navOffset = $('#navbar-main').height();
-    $('.contentWrapper').css('padding-top', navOffset * 2 + 'px');
+    $('.contentWrapper').css('padding-top', navOffset * 1.5 + 'px');
   });
 </script>
 
 {% if site.data.settings.advanced_settings.google_maps_key %}
 <script
-  src='https://maps.googleapis.com/maps/api/js?key={{ site.data.settings.advanced_settings.google_maps_key }}  '></script>
+  src="https://maps.googleapis.com/maps/api/js?key={{ site.data.settings.advanced_settings.google_maps_key }}"></script>
 {% endif %}
 
-<script src="{{ "/assets/js/argon-design-system.js?v=1.0.0" | relative_url }}" type="text/javascript"></script>
+<script src="{{'/assets/js/argon-design-system.js?v=1.0.0' | relative_url }}" type="text/javascript"></script>

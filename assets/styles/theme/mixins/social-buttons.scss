@@ -1,7 +1,8 @@
 // for social buttons
 @mixin social-buttons-color ($color, $state-color) {
   background-color: $color;
-  color: $white;
+  color: $default;
+  border: none !important;
 
   &:focus,
   &:hover {
@@ -50,8 +51,8 @@
     .btn-inner--icon {
       i {
         top: -10px;
-        left: -7px;
-        font-size: 14px;
+        left: -10px;
+        font-size: 20px;
         position: relative;
       }
     }

@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-04-20 12:06:32 +0200
-description: "You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes."
+title:  "Demo Article"
+date:   2023-10-31 12:06:32 +0200
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim faucibus odio sit amet faucibus. Morbi nec urna a diam faucibus ultrices at a lacus. Morbi semper massa at lacus commodo, at sodales augue porttitor. Quisque viverra nunc non rhoncus tristique. Duis dolor elit, euismod at faucibus et, maximus ac justo."
 categories: jekyll update
 featured_image: /assets/img/pages/photo-15.jpg
-author: "Yay"
+author: "Tom"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

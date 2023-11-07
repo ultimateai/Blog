@@ -1,0 +1,78 @@
+.featured {
+  background-image: linear-gradient(82.6deg,#e7f7f0,#e6f4fd 101.55%);
+  position: relative;
+
+  h3.card-title {
+    font-size: 2.1875rem !important;
+    font-weight: 600;
+  }
+}
+
+.image-container {
+  position: absolute;
+  height: 100%;
+  left: 50vw;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .image-container {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .image-container {
+    margin-left: -480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-container {
+    margin-left: -520px;
+  }
+}
+
+.visual-background-connector {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+.blurredBar {
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background-color: hsla(0,0%,100%,.5);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.barText {
+  font-weight: 600;
+}
+
+.callToAction::after {
+  content: "→";
+  padding-left: 8px;
+}
+
+.main-cta {
+  display: inline-block;
+  background: $black;
+  border-radius: 100px;
+  color: $white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 24px;
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.main-cta:hover {
+  color: $white;
+  background-color: $black;
+  background-image: linear-gradient(82.92deg,$black 1.82%,$primary 101.25%);
+}

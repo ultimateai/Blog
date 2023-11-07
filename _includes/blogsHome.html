@@ -1,15 +1,20 @@
-{% if site.data.settings.blog_settings.theme == "grid" %}
-    {% include components/blog/grid.html %}
-{% endif %}
+<div class="contentWrapper">
 
-{% if site.data.settings.blog_settings.theme == "narrow" %}
-    {% include components/blog/narrow.html %}
-{% endif %}
-
-{% if site.data.settings.blog_settings.theme == "basic" %}
-    {% if site.data.settings.home_settings.theme == "landing" %}
-        {% include components/blog/basicLanding.html %}
-    {% else %}
-        {% include components/blog/basic.html %}
+    <div class="mt-4">
+    {% if site.data.settings.blog_settings.theme == "grid" %}
+        {% include components/blog/grid.html %}
     {% endif %}
-{% endif %}
+
+    {% if site.data.settings.blog_settings.theme == "narrow" %}
+        {% include components/blog/narrow.html %}
+    {% endif %}
+
+    {% if site.data.settings.blog_settings.theme == "basic" %}
+        {% if site.data.settings.home_settings.theme == "landing" %}
+            {% include components/blog/basicLanding.html %}
+        {% else %}
+            {% include components/blog/basic.html %}
+        {% endif %}
+    {% endif %}
+    </div>
+</div>

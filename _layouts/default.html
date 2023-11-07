@@ -65,20 +65,10 @@ layout: html_minifier
         </div>
       </div>
     </div>
-    {% elsif page.title %}
-    <!-- Is a page without a banner -->
-    <div class="container contentWrapper pb-2">
-      <div class="text-left mt-5 mb-3">
-        <h3 class="display-2">{{page.title}}</h3>
-        {% if page.subtitle %}
-        <p class="lead">{{page.subtitle}}</p>
-        {% endif %}
-      </div>
-    </div>
     {% endif %}
     {% endif %}
 
-    <div id="main" class="container">
+    <div id="main">
       {{content}}
     </div>
   </div>
