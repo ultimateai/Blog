@@ -111,12 +111,11 @@
 {% endif %}
 
 {% if site.data.settings.blog_settings.theme == "basic" %}
+{% if paginator.page == 1 %}
+{% include components/blog/featuredPost.html %}
+{% endif %}
 <section class="blogs-3">
     <div class="container">
-        {% assign psize = site.posts | size %}
-        {% if psize == 0 %}
-        <p>No posts...yet.</p>
-        {% endif %}
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 {% for post in paginator.posts limit:8 %}
@@ -142,12 +141,8 @@
                                         <div class="author">
                                             <img src=" {{author[1].picture}}" alt="..." class="avatar img-raised">
                                             <div class="text">
-                                            <span class="name"></span>
-
-                                            {{author[1].name}}
-
-                                                </span>
-                                            <div class="meta">{{ post.date | date_to_long_string }}</div>
+                                            <span class="name">{{author[1].name}}</span>
+                                            <div class="meta">{{ author[1].role }}</div>
                                             </div>
                                         </div>
                                     {% endif %}

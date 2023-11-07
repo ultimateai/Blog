@@ -85,21 +85,23 @@
 
 .text {
   position: relative;
-  left: 15px;
-  top: 1px;
+  left: 10px;
+  top: -5px;
 }
 .name {
-  font-size: 1.1em;
-  font-weight: 700;
+  font-size: 1em;
+  color: #373D3F;
+  font-weight: 600;
   line-height: 1.15;
   max-width: 11em;
   overflow: hidden;
-  padding-top: 3px;
+  padding-top: 0;
   text-overflow: ellipsis;
 }
 .meta {
-  color: #a49e9e;
+  color: #373D3F;
   font-size: .8em;
+  text-wrap: none;
 }
 
 // CHAT

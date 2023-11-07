@@ -1,7 +1,16 @@
 
 <div class="fullWidth featured">
     <div class="container image-container">
-        <img src="/assets/img/brand/hp.svg" alt="" class="visual-background-connector" />
+            <img src="/assets/img/brand/hp.svg" alt="" class="visual-background-connector" />
+    </div>
+    <div class="fullWidth blurredBar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <span class="barText">The latest article from our Tech Blog</span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="row">
@@ -16,15 +25,15 @@
                                     <a class="card-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                                 </h3>
                                 {% for author in site.data.settings.authors %}
-                                {% if post.author == author[1].name %}
-                                <div class="author">
-                                    <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar img-raised">
-                                    <div class="text">
-                                        <span class="name">{{author[1].name}}</span>
-                                        <div class="meta">{{{author[1].role }}</div>
+                                    {% if post.author == author[1].name %}
+                                    <div class="author">
+                                        <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar img-raised">
+                                        <div class="text">
+                                            <span class="name">{{author[1].name}}</span>
+                                            <div class="meta">{{{author[1].role }}</div>
+                                        </div>
                                     </div>
-                                </div>
-                                {% endif %}
+                                    {% endif %}
                                 {% endfor %}
                                 <p class="card-description">
                                     {{ post.description }}
@@ -42,6 +51,15 @@
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="fullWidth blurredBar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <span class="barText"><a href="{{ site.baseurl }}/blog" class="callToAction">Explore the blog</a></span>
+                </div>
             </div>
         </div>
     </div>
