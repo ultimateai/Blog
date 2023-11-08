@@ -16,16 +16,28 @@
   color: $black;
 
   a {
-    margin-top: 25px;
+    margin-top: 24px;
     font-size: 1.1rem;
     font-weight: 600;
     color: $black;
   }
 }
 
+.teamtailor-jobs__company, .teamtailor-jobs__location {
+  display: none;
+}
+
 .teamtailor-connect {
   background-image: none;
   background-color: #f8f8f8;
+
+  a {
+    margin-top: 10px;
+  }
+
+  span {
+    margin: 0 12px;
+  }
 }
 
 .teamtailor-jobs-widget_wrapper {
