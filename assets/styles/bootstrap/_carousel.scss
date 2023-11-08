@@ -84,6 +84,10 @@
 // Left/right controls for nav
 //
 
+.carousel-conttol-bar {
+  height: 30px;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -94,18 +98,18 @@
   display: flex; // 1. allow flex styles
   align-items: center; // 2. vertically center contents
   justify-content: center; // 3. horizontally center contents
-  width: $carousel-control-width;
-  color: $carousel-control-color;
+  height: 30px;
+  color: $primary;
   text-align: center;
-  opacity: $carousel-control-opacity;
+  opacity: 0.7;
   @include transition($carousel-control-transition);
 
   // Hover/focus state
   @include hover-focus {
-    color: $carousel-control-color;
+    color: $primary;
+    opacity: 0.7;
     text-decoration: none;
     outline: 0;
-    opacity: $carousel-control-hover-opacity;
   }
 }
 .carousel-control-prev {
