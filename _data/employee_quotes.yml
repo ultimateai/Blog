@@ -1,0 +1,21 @@
+quotes:
+  andrada:
+    name: Andrada Pumnea
+    role: Senior Machine Learning Engineer
+    picture: /assets/img/faces/andrada.jpg
+    quote: Genuinely nice people and challenging technical problems inspire me to show up everyday and deliver my best work. Ultimate deeply cares about the people, finely crafted software and our customers.
+  mohamed:
+    name: Mohamed Abdelazim
+    role: Senior Backend Engineer
+    picture: /assets/img/faces/mohamed.jpg
+    quote: The best thing for me about working here is the people. I've met some of the brightest minds here, but also the most fun individuals! The team is also very diverse owing to the remote-friendly environment, but I also like that we have lovely offices in multiple places. The product is growing rapidly as well, which means there are interesting problems to solve, and lots of growth opportunities.
+  simon:
+    name: Simon Munch-Andersen
+    role: Chief Technology Officer
+    picture: /assets/img/faces/simon.jpg
+    quote: With a unique high level of trust and autonomy, you’ll operate within one of the greatest engineering and product teams, to build the leading AI product.
+  aly:
+    name: Aly Seoudi
+    role: Frontend Engineer
+    picture: /assets/img/faces/aly.jpg
+    quote: Ultimate is a great environment where your work is truly appreciated and valued. This, together with the open and honest communication that is always encouraged, is why I joined and keeps me here today.
