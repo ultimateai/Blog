@@ -124,15 +124,25 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4">
                                 <div class="card-image">
+                                    {% if post.layout == "podcast" %}
+                                    <a href="{{ post.link }}" target="_blank">
+                                        <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                    </a>
+                                    {% else %}
                                     <a href="{{ post.url | relative_url }}">
                                         <img class="img rounded" src="{{ post.featured_image | relative_url }}">
                                     </a>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-8">
                                 <div class="">
                                     <h3 class="card-title">
+                                        {% if post.layout == "podcast" %}
+                                        <a href="{{ post.link}}" target="_blank">{{ post.title }}</a>
+                                        {% else %}
                                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                        {% endif %}
                                     </h3>
                                     {% for author in site.data.settings.authors %}
                                     {% if post.author == author[1].name %}
@@ -148,7 +158,12 @@
                                     <p class="card-description">
                                         {{ post.description }}
                                     </p>
+                                    {% if post.layout == "podcast" %}
+                                    <a class="callToAction" target="_blank" href="{{ post.link }}"> Listen to the podcast </a>
+                                    {% else %}
                                     <a class="callToAction" href="{{ post.url | relative_url }}"> Read More </a>
+                                    {% endif %}
+
                                 </div>
                             </div>
                         </div>

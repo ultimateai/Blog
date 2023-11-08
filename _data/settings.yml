@@ -64,18 +64,10 @@ social_settings:
 
 
 authors:
-  tom:
-    name: Tom
-    picture: /assets/img/faces/team-1.jpg
-    role: Senior Backend Engineer
-  jane:
-    name: Jane
-    picture: /assets/img/faces/team-4.jpg
-    role: AI Researcher
-  michael:
-    name: Michael
-    picture: /assets/img/faces/michael.jpg
-    role: Senior Product Manager
+  simon:
+    name: Simon Munch-Andersen
+    role: Chief Technology Officer
+    picture: /assets/img/faces/faces_simon.jpeg
 
 advanced_settings:
   analytics_code:
