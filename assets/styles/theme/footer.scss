@@ -1,6 +1,15 @@
 .footer {
     background: $black;
-    padding: 1.5rem 0;
+
+    .wrapper-copyright {
+        background: #18181f;
+        padding-top: 0.75rem;
+    }
+
+    .container {
+        padding-bottom: 1.5rem;
+        padding-top: 0.75rem;
+    }
 
     .col-footer {
         .heading {
