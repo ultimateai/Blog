@@ -1,7 +1,10 @@
 .section {
     position: relative;
     padding-top: $spacer * 4;
-    padding-bottom: $spacer * 4;
+
+    &:last-child {
+        padding-bottom: $spacer * 4;
+    }
 }
 
 .section-xl {
