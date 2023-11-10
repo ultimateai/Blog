@@ -53,11 +53,11 @@
                             <div class="card-image">
                                 {% if post.layout == "podcast" %}
                                 <a target="_blank" href="{{ post.link }}">
-                                    <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                    <img class="img rounded" src="{{ post.preview_image | relative_url }}">
                                 </a>
                                 {% else %}
                                 <a href="{{ post.url | relative_url }}">
-                                    <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                    <img class="img rounded" src="{{ post.preview_image | relative_url }}">
                                 </a>
                                 {% endif %}
                             </div>

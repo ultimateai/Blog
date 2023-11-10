@@ -9,7 +9,7 @@
             {% for post in paginator.posts %}
             <div class="col-lg-4">
                 <div class="card card-blog card-background" data-animation="zooming">
-                    <div class="full-background" style="background-image: url({{ post.featured_image | relative_url }})"></div>
+                    <div class="full-background" style="background-image: url({{ post.preview_image | relative_url }})"></div>
                     <a href="{{ post.url | relative_url }}">
                         <div class="card-body">
                             <div class="content-bottom">
@@ -66,7 +66,7 @@
             {% for post in paginator.posts %}
             <div class="{% if forloop.index == 1 or forloop.index == 6 %}col-lg-6{% else %}col-lg-3{% endif %}">
                 <div class="card card-blog card-background" data-animation="zooming">
-                    <div class="full-background" style="background-image: url({{ post.featured_image | relative_url }})"></div>
+                    <div class="full-background" style="background-image: url({{ post.preview_image | relative_url }})"></div>
                     <a href="{{ post.url | relative_url }}">
                         <div class="card-body">
                             <div class="content-bottom">
@@ -126,11 +126,11 @@
                                 <div class="card-image">
                                     {% if post.layout == "podcast" %}
                                     <a href="{{ post.link }}" target="_blank">
-                                        <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                        <img class="img rounded" src="{{ post.preview_image | relative_url }}">
                                     </a>
                                     {% else %}
                                     <a href="{{ post.url | relative_url }}">
-                                        <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                        <img class="img rounded" src="{{ post.preview_image | relative_url }}">
                                     </a>
                                     {% endif %}
                                 </div>

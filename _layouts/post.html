@@ -1,31 +1,39 @@
 ---
 layout: default
 ---
-<div class="page-header header-filter" style="width: 100vw; margin-left: calc(50% - 50vw);">
-  <div class="page-header-image" style="background-image: url({{ page.featured_image | relative_url }});"></div>
+<div class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto text-center pt-8">
-        <h2 class="display-2 text-white">{{ page.title }}</h2>
+      <div class="col-lg-12 mx-auto text-center pt-8">
+        <h2 class="display-2">{{ page.title }}</h2>
       </div>
     </div>
     <div class="row">
-      <div class="floating-box bg-default">
+      <div class="col-lg-12 mx-auto text-center">
         <div class="box text-center">
           {% for author in site.data.settings.authors %}
           {% if page.author == author[1].name %}
-          <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-xl img-raised">
+          <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-md">
           {% endif %}
           {% endfor %}
         </div>
         {% for author in site.data.settings.authors %}
         {% if page.author == author[1].name %}
-        <blockquote class="blockquote text-center mt-2">
-          <p class="mb-0 text-white">{{ author[1].name}}, {{author[1].role}}</p>
+        <blockquote class="text-center mt-2">
+          <p class="mb-0">{{ author[1].name}}, {{author[1].role}}</p>
         </blockquote>
         {% endif %}
         {% endfor %}
-        <h2 class="lead text-white pl-5 pr-5 pb-5 text-center">{{page.description}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fullWidth featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto text-center">
+        <p class="lead pt-4 pb-4 text-center">{{page.description}}</p>
       </div>
     </div>
   </div>
@@ -35,7 +43,6 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-8 ml-auto mr-auto">
-        <h3 class="title">{{ page.title }}</h3>
         <article class="blog-post">
           {{ page.content }}
         </article>
@@ -57,7 +64,7 @@ layout: default
       {% for post in site.posts limit:6 %}
       <div class="{% if forloop.index == 1 or forloop.index == 6 %}col-lg-6{% else %}col-lg-3{% endif %}">
         <div class="card card-blog card-background" data-animation="zooming">
-          <div class="full-background" style="background-image: url({{ post.featured_image | relative_url }})"></div>
+          <div class="full-background" style="background-image: url({{ post.preview_image | relative_url }})"></div>
           <a href="{{ post.url | relative_url }}">
             <div class="card-body">
               <div class="content-bottom">
