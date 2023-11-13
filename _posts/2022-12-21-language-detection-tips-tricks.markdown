@@ -13,11 +13,13 @@ preview_image: /assets/img/posts/language-detection.png
 author: "András Beke"
 ---
 
-##What Is Language Detection?
+## What Is Language Detection?
 
 Language detection is the task of automatically detecting the language(s) present in a document based on the content of 
 the document. Computational approaches to this problem view it as a special case of text categorization, solved with 
 various statistical methods. In the following table, there are some examples of language and text pairs.
+
+![language detection](/assets/img/posts/language-detection_images_1.png )
 
 Language detection is not the hardest task in NLP as language can be detected correctly over 99% of the time for 
 well-written long texts. However, language detection in chat can be quite difficult. One of the most important problems 
@@ -26,7 +28,7 @@ common situation in a conversational chat bot is short interactions between the 
 text is challenging for language detection as well, where the user mixes more than one language when chatting with the bot. 
 Another difficulty is distinguishing between closely related languages such as Spanish and Catalan, Serbian and Croatian.
 
-##What do we need in a language detection model?
+## What do we need in a language detection model?
 
 For selecting the best language detection method for us we have to take into account the following 
 requirements:
@@ -36,7 +38,7 @@ requirements:
 * The model should have a low size to reduce its cost of it as much as possible.
 * The model should be real-time. This is very important to avoid having a bottleneck in the chat flow.
 
-##Reviewing existing tools
+## Reviewing existing tools
 
 Language Detection has been extensively studied in the literature. At the very beginning, 
 all of the research has been done on long, well-written and clean sentences, and 
@@ -71,7 +73,7 @@ Based on the review, we concluded that there is no ready-to-use solution for us.
 of them can work on short texts with high speed and good quality for multiple languages. 
 Therefore we decided to build a Language Detection model in-house.
 
-##Why is Language Detection so Difficult in Chat?
+## Why is Language Detection so Difficult in Chat?
 
 Before designing the Language Detection model, we identified the key problems of general 
 Language Detection tools: why their performance is so bad on chat messages. The first 
@@ -79,8 +81,7 @@ and most trivial problem is that the message is very short - strings composed of
 characters are often present in more than one language, making reliable identification 
 challenging.
 
-> "api" -  This is an Indonesian word with meaning "fire", but also an English abbreviation 
-> for "application programming interface".
+> "api" -  This is an Indonesian word with meaning "fire", but also an English abbreviation for "application programming interface".
 
 Most of the time in chat users are typing a message like a query instead writing 
 complete sentences:
@@ -130,7 +131,7 @@ accuracy over those 100 examples should be 80%. In other words, if 0.8 is a true
 probability, the model should get 20% of these examples wrong! For all the examples 
 with a confidence score of 0.9, the accuracy should be 90%, and so on.
 
-##Our Journey: Design Tips and Tricks
+## Our Journey: Design Tips and Tricks
 
-###1 Choose Classifier Model
+### 1 Choose Classifier Model
 

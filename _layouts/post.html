@@ -1,55 +1,59 @@
 ---
 layout: default
 ---
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto text-center pt-8">
-        <h2 class="display-2">{{ page.title }}</h2>
+<div class="blog-post-layout">
+  <div class="section mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-center pt-8">
+          <h2 class="display-2">{{ page.title }}</h2>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12 mx-auto text-center">
+  </div>
+
+  <div class="container">
+    <div class="row author-container">
+      <div class="col-lg-12 mx-auto text-center author-content">
         <div class="box text-center">
           {% for author in site.data.settings.authors %}
           {% if page.author == author[1].name %}
-          <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-md">
+          <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-lg">
           {% endif %}
           {% endfor %}
         </div>
         {% for author in site.data.settings.authors %}
         {% if page.author == author[1].name %}
-        <blockquote class="text-center mt-2">
-          <p class="mb-0">{{ author[1].name}}, {{author[1].role}}</p>
-        </blockquote>
+          <p class="text-center mt-2mb-0">{{ author[1].name}}, {{author[1].role}}</p>
         {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
-</div>
 
-<div class="fullWidth featured">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mx-auto text-center">
-        <p class="lead pt-4 pb-4 text-center">{{page.description}}</p>
+  <div class="fullWidth featured">
+    <div class="fullWidth blurredBar featured-spacer"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-center">
+          <p class="lead pt-4 pb-4 text-center">{{page.description}}</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 ml-auto mr-auto">
-        <article class="blog-post">
-          {{ page.content }}
-        </article>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ml-auto mr-auto">
+          <article class="blog-post">
+            {{ page.content }}
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 
 

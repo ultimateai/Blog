@@ -72,6 +72,10 @@ authors:
     name: Simon Munch-Andersen
     role: Chief Technology Officer
     picture: /assets/img/faces/faces_simon.jpeg
+  test:
+    name: Test Author
+    role: Role in the Company
+    picture: /assets/img/faces/faces_andrada.jpg
 
 advanced_settings:
   analytics_code:

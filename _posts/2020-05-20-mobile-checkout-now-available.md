@@ -1,16 +1,21 @@
 ---
-title: This is a demo post
+title: This is a demo Post
 date: 2020-05-20 00:00:00
-description: This is a demo post that shows what you can do inside portfolio and blog posts. We’ve included everything you need to create engaging posts and case studies to show off your work in a beautiful way.
-featured_image: /assets/img/pages/boxed-water.jpg
-author: Jane
+description: This is a demo post that shows what you can do inside blog posts. We’ve included everything you need to create engaging posts and show off your work in a beautiful way.
+preview_image: /assets/img/posts/language-detection.png
+author: Test Author
 ---
 
-This page is a demo that shows everything you can do inside pages and blog posts.
+Here are the basic typography types you can use:
 
-We've included everything you need to create engaging posts about your work, and show off your case studies in a beautiful way.
+# Headline 1
+## Headline 2
+### Headline 3
+#### Headline 4
+##### Headline 5
+###### Headline 6
 
-**Obviously,** we’ve styled up *all the basic* text formatting options [available in markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+A paragraph containing **bold text** and *italic text* to highlight  [available in markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 You can create lists:
 
