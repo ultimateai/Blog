@@ -13,7 +13,11 @@
                         <div class="col-lg-8 col-md-8">
                             <div>
                                 <h3 class="card-title">
+                                    {% if post.layout == "podcast" %}
+                                    <a class="card-title-link" target="_blank" href="{{ post.link }}">{{ post.title }}</a>
+                                    {% else %}
                                     <a class="card-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                    {% endif %}
                                 </h3>
                                 {% for author in site.data.settings.authors %}
                                 {% if post.author == author[1].name %}
@@ -29,14 +33,24 @@
                                 <p class="card-description">
                                     {{ post.description }}
                                 </p>
+                                {% if post.layout == "podcast" %}
+                                <a class="main-cta" target="_blank" href="{{ post.link }}"> Listen to the Podcast </a>
+                                {% else %}
                                 <a class="main-cta" href="{{ post.url | relative_url }}"> Read More </a>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="card-image">
-                                <a href="{{ post.url | relative_url }}">
-                                    <img class="img rounded" src="{{ post.featured_image | relative_url }}">
+                                {% if post.layout == "podcast" %}
+                                <a target="_blank" href="{{ post.link }}">
+                                    <img class="img rounded" src="{{ post.preview_image | relative_url }}">
                                 </a>
+                                {% else %}
+                                <a href="{{ post.url | relative_url }}">
+                                    <img class="img rounded" src="{{ post.preview_image | relative_url }}">
+                                </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ blog_settings:
     # grid – a full-width square grid of posts
   theme: basic
   # Should we display a narrow grid of other posts at the bottom of each blog post?
-  read_more: "yes"
+  read_more: "no"
 
 # Setup your navigation below – how to use the icons:
   # 1. See all the icons available here https://demos.creative-tim.com/argon-design-system-pro/docs/1.0/foundation/icons.html
@@ -64,18 +64,18 @@ social_settings:
 
 
 authors:
-  tom:
-    name: Tom
-    picture: /assets/img/faces/team-1.jpg
-    role: Senior Backend Engineer
-  jane:
-    name: Jane
-    picture: /assets/img/faces/team-4.jpg
-    role: AI Researcher
-  michael:
-    name: Michael
-    picture: /assets/img/faces/michael.jpg
-    role: Senior Product Manager
+  andras:
+    name: András Beke
+    role: Senior AI Researcher
+    picture: /assets/img/faces/faces_andras.jpeg
+  simon:
+    name: Simon Munch-Andersen
+    role: Chief Technology Officer
+    picture: /assets/img/faces/faces_simon.jpeg
+  test:
+    name: Test Author
+    role: Role in the Company
+    picture: /assets/img/faces/faces_andrada.jpg
 
 advanced_settings:
   analytics_code:
