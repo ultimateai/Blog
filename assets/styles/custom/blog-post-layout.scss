@@ -18,6 +18,15 @@
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
   blockquote {
     margin: 0 0 1rem 0;
     padding: 1rem 2rem 0.5rem 2rem;
@@ -28,4 +37,31 @@
   li {
     font-weight: 300;
   }
+
+  .table thead th {
+    color: $default;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .table tbody td {
+    color: $default;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  code {
+    color: $default;
+    background-color: #e6f4fd;
+  }
+
+  .highlight {
+    background-color: #e6f4fd;
+    border-radius: 8px;
+
+    pre code {
+      color: $default;
+    }
+  }
+
 }
