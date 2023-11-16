@@ -24,9 +24,10 @@ layout: default
         </div>
         {% for author in site.data.settings.authors %}
         {% if page.author == author[1].name %}
-          <p class="text-center mt-2mb-0">{{ author[1].name}}, {{author[1].role}}</p>
+          <p class="text-center mt-2 mb-0">{{ author[1].name}}, {{author[1].role}}</p>
         {% endif %}
         {% endfor %}
+        <p class="text-center mt-0 mb-2">- {{page.date | date: "%B %Y"}} -</p>
       </div>
     </div>
   </div>

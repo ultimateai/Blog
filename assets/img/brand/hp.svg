@@ -1,17 +1,31 @@
-<svg width="700" height="828" viewBox="0 0 700 828" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_13592_56669)">
-<path d="M1193.41 -285.947C1543.22 -163.082 2137.45 195.836 1715.9 648.585C1188.97 1214.52 284.906 978.538 227.146 496.597C169.385 14.656 948.628 -108.204 340.323 -608.032" stroke="url(#paint0_radial_13592_56669)" stroke-width="100" stroke-linecap="round"/>
-<path d="M1193.41 -285.947C1543.22 -163.082 2137.45 195.836 1715.9 648.585C1188.97 1214.52 284.906 978.538 227.145 496.597C169.385 14.656 948.628 -108.204 340.323 -608.032" stroke="#1F1F28" stroke-width="2.5" stroke-linecap="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 828" style="enable-background:new 0 0 700 828;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:none;stroke:url(#SVGID_3_);stroke-width:100;stroke-linecap:round;}
+	.st2{fill:none;stroke:#1F1F28;stroke-width:2.5;stroke-linecap:round;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="159" width="700" height="828"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		
+			<radialGradient id="SVGID_3_" cx="-331.9159" cy="797.8398" r="1.0008" gradientTransform="matrix(214.0008 -1289.5033 -5977.4551 -991.9945 4841122 364650.0313)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.4383" style="stop-color:#8D6DE8"/>
+			<stop  offset="0.5574" style="stop-color:#5D5ADC"/>
+			<stop  offset="0.755" style="stop-color:#5EC99B"/>
+			<stop  offset="0.9249" style="stop-color:#F2D645"/>
+		</radialGradient>
+		<path class="st1" d="M1352.4-285.9c349.8,122.9,944,481.8,522.5,934.5c-526.9,565.9-1431,330-1488.8-152
+			C328.4,14.7,1107.6-108.2,499.3-608"/>
+		<path class="st2" d="M1352.4-285.9c349.8,122.9,944,481.8,522.5,934.5c-526.9,565.9-1431,330-1488.8-152
+			C328.4,14.7,1107.6-108.2,499.3-608"/>
+	</g>
 </g>
-<defs>
-<radialGradient id="paint0_radial_13592_56669" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(396.5 1123.5) rotate(-80.5773) scale(1307.14 6059.21)">
-<stop offset="0.438302" stop-color="#8D6DE8"/>
-<stop offset="0.557431" stop-color="#5D5ADC"/>
-<stop offset="0.754992" stop-color="#5EC99B"/>
-<stop offset="0.924903" stop-color="#F2D645"/>
-</radialGradient>
-<clipPath id="clip0_13592_56669">
-<rect width="700" height="828" fill="white"/>
-</clipPath>
-</defs>
 </svg>
