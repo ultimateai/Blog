@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Language Detection - Tips and Tricks"
-date:   2022-12-21 10:00:00 +0100
+date:   2023-01-21 10:00:00 +0100
 description: "In the last 5 years <strong>Ultimate.</strong> has grown from a monolingual Finnish solution to a powerful multilingual provider 
                 of AI for customer support. <br />
                 We released a new language-agnostic model type, allowing us to predict intents in 
@@ -15,7 +15,7 @@ description: "In the last 5 years <strong>Ultimate.</strong> has grown from a mo
                <strong>Language Detection Model</strong>.<br />
                In this blog I’ll present our journey to creating the most accurate model in 
                the field."
-categories: podcast leadership decision-making
+categories: language-detection ai
 preview_image: /assets/img/posts/language-detection.png
 author: "András Beke"
 ---
@@ -380,7 +380,7 @@ models come. The worst are the langdetect, and lingua models regarding speed.
 
 ![speed test results](/assets/img/posts/language-detection_images_7.png)
 
-| Language Detection Models | Number of samples <br />within a second | Number of samples <br />within a second <br />(in log10 scale) |
+| Language Detection Models | Number of samples <br />within a second | Number of samples within a second <br />(in log10 scale) |
 |---------------------------|-----------------------------------------|----------------------------------------------------------------|
 | langdetect | 0.42 | 0 |
 | lingua | 5.52 | 0.741 |

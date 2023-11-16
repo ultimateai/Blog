@@ -144,17 +144,26 @@
                                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                                         {% endif %}
                                     </h3>
-                                    {% for author in site.data.settings.authors %}
-                                    {% if post.author == author[1].name %}
-                                    <div class="author">
-                                        <img src=" {{author[1].picture}}" alt="..." class="avatar img-raised">
-                                        <div class="text">
-                                            <span class="name">{{author[1].name}}</span>
-                                            <div class="meta">{{ author[1].role }}</div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                {% for author in site.data.settings.authors %}
+                                                {% if post.author == author[1].name %}
+                                                <div class="author">
+                                                    <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar img-raised">
+                                                    <div class="text">
+                                                        <span class="name">{{author[1].name}}</span>
+                                                        <div class="meta">{{{author[1].role }}</div>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="date">{{post.date | date: "%b %Y"}}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    {% endif %}
-                                    {% endfor %}
                                     <p class="card-description">
                                         {{ post.description }}
                                     </p>
