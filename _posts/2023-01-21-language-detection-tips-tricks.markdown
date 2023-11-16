@@ -380,7 +380,7 @@ models come. The worst are the langdetect, and lingua models regarding speed.
 
 ![speed test results](/assets/img/posts/language-detection_images_7.png)
 
-| Language Detection Models | Number of samples <br />within a second | Number of samples <br />within a second <br />(in log10 scale) |
+| Language Detection Models | Number of samples <br />within a second | Number of samples within a second <br />(in log10 scale) |
 |---------------------------|-----------------------------------------|----------------------------------------------------------------|
 | langdetect | 0.42 | 0 |
 | lingua | 5.52 | 0.741 |
