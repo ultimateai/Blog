@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Ultimate.ai Tech Blog
+  site_title: Ultimate.ai RnD Blog
   favicon_image: /assets/img/favicon.png
 
 header_settings:
@@ -35,7 +35,17 @@ menu_settings:
     - title: 'Blog'
       url: '/blog'
     - title: 'About Us'
-      url: '/about'
+      submenu_items:
+        - title: 'RnD at Ultimate'
+          url: '/about'
+        - title: 'Platform Teams'
+          url: '/platform-teams'
+        - title: 'AI Team'
+          url: '/ai-teams'
+        - title: 'Engineering Teams'
+          url: '/engineering-teams'
+        - title: 'Product Teams'
+          url: '/product-teams'
     - title: 'Careers'
       url: '/careers'
 
