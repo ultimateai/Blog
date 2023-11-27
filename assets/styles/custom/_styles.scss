@@ -117,6 +117,13 @@ blockquote {
     }
 }
 
+.blurredContainer {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: hsla(154, 50%, 94%, .5);
+    border-radius: 12px;
+}
+
 .carousel-team .carousel-control-prev {
     top: 30%;
     left: 0% !important;

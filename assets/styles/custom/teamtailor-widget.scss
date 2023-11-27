@@ -23,6 +23,14 @@
   }
 }
 
+.teamtailor-jobs__job-info {
+  color: transparent;
+
+  span {
+    color: $black;
+  }
+}
+
 .teamtailor-jobs__company, .teamtailor-jobs__location {
   display: none;
 }
