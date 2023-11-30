@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Language Detection - Tips and Tricks"
-date:   2023-01-21 10:00:00 +0100
+date:   2023-01-21
 description: "In the last 5 years <strong>Ultimate.</strong> has grown from a monolingual Finnish solution to a powerful multilingual provider 
                 of AI for customer support. <br />
                 We released a new language-agnostic model type, allowing us to predict intents in 
