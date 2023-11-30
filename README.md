@@ -1,14 +1,86 @@
-# ultimateai.github.io
+# The Ultimate. RnD Blog
 
-The Ultimate tech blog repo. Instructions are below.
+This Blog uses [Jekyll](https://jekyllrb.com/), a static site generator, and the [Argon Theme](https://argon.jekyllthemes.io/) 
+as a base, which we customized to fit our needs.
 
 ---
+
 ## Setup
 
+### Prerequisites
 
-You need to have Ruby 2.7.3 installed. Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies. If Bundler is not installed yet, you can do so by running `gem install bundler`. Then run `jekyll serve` to start the Jekyll server.
+[Jekyll](https://jekyllrb.com/) is a Ruby Gem, to set up this project you need:
 
-We use a customized theme called Argo Pro. This theme is a collaboration between [Creative Tim](https://creative-tim.com) and [Jekyll Themes](https://jekyllthemes.io).
+- [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.7.3 or higher, including all development headers (check your Ruby version using `ruby -v`)
+- [RubyGems](https://rubygems.org/pages/download) (check your Gems version using `gem -v`)
+- [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/) (check versions using `gcc -v`,`g++ -v`, and `make -v`)
+
+Check the detailed [installation guide for macOS here](https://jekyllrb.com/docs/installation/macos/).
+
+### Run the project locally
+
+- Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies.
+- If Bundler is not installed yet, you can do so by running `gem install bundler`. 
+- Run `jekyll serve` to start the Jekyll server.
+- The project will be served on [http://localhost:4000/](http://localhost:4000/)
+
+---
+
+## Add a Blog Post or Podcast
+
+Blog Posts and Podcasts are rendered from markdown files in `/_posts`. 
+To add a new post, follow these steps:
+
+#### 1. Create an Author
+If this is the first contribution by this author, add the author 
+with name, role and path to their profile picture to `/_data/blog_authors.yml`.
+
+#### 2. Add the post and fill in the Front Matter information
+Add a new markdown file in `/_posts` and add a [Front Matter](https://jekyllrb.com/docs/front-matter/) section in the following format:
+
+```markdown
+---
+layout: post | podcast
+title:  "The title of your post"
+date:   date
+description: "Two or three sentences summarizing the content. This is the text that will appear in the overview page and at the top of your article-page, telling readers what this article is about."
+categories: optional categories
+preview_image: path/to/the/preview.png
+author: "Name of the Author"
+link: "If this is a podcast link to where people can listen to it"
+---
+```
+
+- **layout**: Enum { post, podcast } - Chose `post` for blog posts, these will be rendered in the overview with a link to an article page to read the full content. Chose `podcast` for podcasts that don't need a separate page. They will be rendered in the overview the same way posts are, but instead of the article they will link to an external url where the podcast is hosted.
+- **title**: Title of your Post or Podcast
+- **date**: Publishing Date in the format YYYY-MM-DD
+- **description**: Two or three sentences summarizing the content. This is the text that will appear in the overview page and at the top of your article-page, telling readers what this article is about.
+- **categories**: Adding categories (ie: ai, leadership etc.) is optional. Currently they are not used, but could be used in the future to display similar content below the article.
+- **preview_image**: `path/to/the/preview.png` this image will be displayed in the overview.
+- **author**: Add the author's name as it appears in `/_data/blog_authors.yml`.
+- **link**: If you chose layout `podcast`, add a link to where people can listen to the podcast.
+
+#### 3. Add content 
+
+If you are adding a podcast, you can skip this step. 
+
+If you are adding a post, add the content for your article page underneath the 
+Front Matter information in your markdown file.
+
+You can use headlines and horizontal rules to structure your content into 
+digestible sections and use images, blockquotes, lists, tables or code blocks 
+to highlight and display information.
+
+To see an example of components and text highlighting that is available, check out 
+the demo post in `/_demo-posts/2023-11-14-demo-post.md`
+
+---
+
+## Add or update a quote
+
+The quotes on the careers page are defined in `_data/employee_quotes.yml`
+To add a new quote, add a new entry in that yaml file with the quote, as well as name, 
+role and picture of the employee.
 
 ---
 
@@ -70,12 +142,6 @@ Hint: you can add the contact form to any page of your site using the include â€
 **Social settings**
 
 Here you can add links to your profiles on social networks, and they'll be shown in the footer. Simply add your URL next to the ones you want to show.
-
-**Author settings**
-
-If you are using the basic blog theme, you can add display author information in the list of posts.
-
-Make sure the name of the author of the post matches the author name field exactly in settings.yml.
 
 **Advanced options**
 

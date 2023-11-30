@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div id="carouselEmployeeQuotes" class="carousel slide">
                     <div class="carousel-inner">
-                        {% for quote in site.data.employee_quotes.quotes limit:10 %}
+                        {% for quote in site.data.employee_quotes limit:10 %}
                         {% if forloop.index == 1 %}
                         <div class="carousel-item active">
                         {% else %}

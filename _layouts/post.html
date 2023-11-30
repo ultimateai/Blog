@@ -16,13 +16,13 @@ layout: default
     <div class="row author-container">
       <div class="col-lg-12 mx-auto text-center author-content">
         <div class="box text-center">
-          {% for author in site.data.settings.authors %}
+          {% for author in site.data.blog_authors %}
           {% if page.author == author[1].name %}
           <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar avatar-lg">
           {% endif %}
           {% endfor %}
         </div>
-        {% for author in site.data.settings.authors %}
+        {% for author in site.data.blog_authors %}
         {% if page.author == author[1].name %}
           <p class="text-center mt-2 mb-0">{{ author[1].name}}, {{author[1].role}}</p>
         {% endif %}
@@ -73,7 +73,7 @@ layout: default
           <a href="{{ post.url | relative_url }}">
             <div class="card-body">
               <div class="content-bottom">
-                {% for author in site.data.settings.authors %}
+                {% for author in site.data.blog_authors %}
                 {% if post.author == author[1].name %}
                 <h6 class="card-category text-white opacity-8">
                   {{ author[1].name}}
