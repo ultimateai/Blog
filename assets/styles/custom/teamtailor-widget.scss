@@ -23,11 +23,13 @@
   }
 }
 
-.teamtailor-jobs__job-info {
-  color: transparent;
+.teamtailor-jobs__job {
+  .teamtailor-jobs__job-info {
+    color: transparent;
 
-  span {
-    color: $black;
+    span {
+      color: $black;
+    }
   }
 }
 
