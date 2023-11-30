@@ -1,0 +1,16 @@
+andras:
+    name: András Beke
+    role: Senior AI Researcher
+    picture: /assets/img/faces/faces_andras.jpeg
+demo:
+    name: Demo Author
+    role: Role in the Company
+    picture: /assets/img/faces/faces_demo.png
+mohamed:
+    name: Mohamed Abdelazim
+    role: Senior Backend Engineer
+    picture: /assets/img/faces/faces_mohamed.jpeg
+simon:
+    name: Simon Munch-Andersen
+    role: Chief Technology Officer
+    picture: /assets/img/faces/faces_simon.jpeg

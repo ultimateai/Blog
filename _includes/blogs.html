@@ -147,7 +147,7 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-8">
-                                                {% for author in site.data.settings.authors %}
+                                                {% for author in site.data.blog_authors %}
                                                 {% if post.author == author[1].name %}
                                                 <div class="author">
                                                     <img src=" {{author[1].picture | relative_url}}" alt="..." class="avatar img-raised">
