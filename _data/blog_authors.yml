@@ -14,3 +14,7 @@ simon:
     name: Simon Munch-Andersen
     role: Chief Technology Officer
     picture: /assets/img/faces/faces_simon.jpeg
+meysam:
+    name: Meysam Asgari-Chenaghlu
+    role: Staff AI Researcher
+    picture: /assets/img/faces/faces_meysam.jpg
