@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Enhancing bot deletion through an event-driven setup"
-date:   2023-04-01
+date:   2023-05-01
 description: "Bot deletion is a critical path in our workflow. Almost all of our data 
               is related to bots in one way or another, so deleting a bot is a process 
               that can run for quite some time.<br />
