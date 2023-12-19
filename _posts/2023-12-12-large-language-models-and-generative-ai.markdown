@@ -15,14 +15,17 @@ and others. However, an elucidation of the precise meanings behind these buzzwor
 it denotes a distinct category of Artificial Intelligence models capable of generating outputs across various modalities, 
 encompassing text, image, video, and more.
 
+In this article we will try to break ice from these buzzwords and with focus on LLMs, explain how they are trained and what are 
+their risks and advantages.
+
 ## What is a Large Model?
 
-A large model is typically a model trained on vast amounts of data and it has billions of parameters. Model parameters are trainable
+A large model is typically a model trained on vast amounts of data, and it has billions of parameters. Model parameters are trainable
 variables (model weights) that are adjusted during training. In order to tune these weights in a way that a certain mathematical
-operation over them would result in specific output, required lots of computation power and examples to show to this models.
+operation over them would result in specific output, required lots of computation power and examples to show to these models.
 Usually these models make a prediction such as completing a sentence given a part of it, and then look back at the correct
 sentence part and tune their parameters to create correct output. This iteration takes place for many rounds and on many samples
-combined together to provide accurate results. However, this is not only option for training on a large corpora, but also different
+combined to provide accurate results. However, this is not only option for training on a large corpora, but also different
 approaches such as masked language modelling, translation language modelling, etc. are available as well.
 
 In order to achieve good results, typical pipeline of training includes following steps:
@@ -52,6 +55,9 @@ that it gained during different steps of training. World knowledge helps it to k
 
 Specific tasks, especially mathematical ones, are very helpful too, because they help model to have at least a basic understanding of the 
 
+Regardless of these main capabilities, the main ones can be considered as comprehension, world knowledge, reasoning, and tool usage.
+
+![Model Training flow](/assets/img/posts/llm.png)
 
 # The Potential for Misinformation in GenAI: Hallucination
 
@@ -70,4 +76,22 @@ Moreover, beyond these typical cases, there is a potential for fabrication. In s
 it can create false narratives around individuals. This introduces a more severe problem where real individuals are portrayed inaccurately and 
 explained in a misleading manner.
 
-Hallucination is a term used for this case.
+Hallucination is a term used for this case. World knowledge is very useful when dealing with different types of problems but 
+on the other hand it can create hallucination as well. LLMs are prune to hallucination because they might have gained some world knowledge
+during training and sometimes, this knowledge is either very shallow or false.
+
+# Trends and future of LLMs
+
+Earlier days of LLMs were mostly about text completion. A handy writing assistant was a very good name for these models. More advances
+on training schemes, training data, and newer approaches on modeling as well made them more capable. Now they are able to understand the context
+and with their in-context learning skills then can easily adapt to the given tasks without even being directly trained on them.
+
+Emerging skills such as using tools and getting feedback from environment made them even more capable. They can use tools and even plan to
+how use them. Planning skills combined with self-correcting based on the output of the tool makes them good learners that in-context can solve complex
+problems with given tools. A LLM on its own might not be best tool to work with specific type of data (such as video), but with given tools 
+such as video transcripting, it can understand the context of the video and act accordingly. With more advanced tools such as code execution, they
+not only use tools, but also can write tools for themselves. Coding, which is one of the capabilities of these models helps them to create their own
+set of tools and also in cases where the software does not work as expected, they can find the issue and solve it.
+
+These fascinating capabilities of LLMs made them a very good assistant in many terms. Coding assistants, daily personal assistants, even emotional companions
+are examples of how GenAI and LLMs in particular are taking a significant part in our lives.
