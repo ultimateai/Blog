@@ -6,6 +6,10 @@ demo:
     name: Demo Author
     role: Role in the Company
     picture: /assets/img/faces/faces_demo.png
+franzi:
+    name: Franziska Hempel
+    role: Director of Product Engineering
+    picture: /assets/img/faces/faces_franzi.jpg
 mohamed:
     name: Mohamed Abdelazim
     role: Senior Backend Engineer
