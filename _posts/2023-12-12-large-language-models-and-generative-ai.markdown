@@ -1,97 +1,119 @@
 ---
 layout: post
-title:  "Large Language Models and Generative AI"
-date:   2023-12-12
-description: "Summary to be here!"
+title:  "Demystifying LLMs: Ultimate’s take on Next-Gen Conversational AI"
+date:   2023-12-20
+description: "The rapidly evolving landscape of AI has witnessed an influx of new terminology, acronyms and buzzwords, such as GenAI, LLM, Prompt Engineering, and others. 
+<br />This article aims to demystify these terms, focussing on Large Language Models (LLMs), which have emerged as game-changers, blending technological prowess with vast capabilities. 
+<br />We will discuss their capabilities, how they are trained and look at both their risks and their potential as well as briefly touch on how Ultimate embraced these models to revolutionize customer Interactions."
 categories: llm genai ai
-preview_image: /assets/img/posts/language-detection.png
+preview_image: /assets/img/posts/llm-overview.png
 author: "Meysam Asgari-Chenaghlu"
 ---
 
-# Large Language Models: A gentle introduction
+## What are Large Language Models?
 
-In recent years, a proliferation of new terminology and buzzwords has emerged, including GenAI, LLM, Prompt Engineering, 
-and others. However, an elucidation of the precise meanings behind these buzzwords is warranted. Commencing with GenAI, 
-it denotes a distinct category of Artificial Intelligence models capable of generating outputs across various modalities, 
-encompassing text, image, video, and more.
+Large Language Models (LLMs) represent a distinct class of AI models, boasting unparalleled capabilities across multiple modalities. Text, image, video – the boundaries blur under their computational prowess. But their magic lies deeper. They understand context, learn from mistakes, and even use tools like code or video transcriptions.
 
-In this article we will try to break ice from these buzzwords and with focus on LLMs, explain how they are trained and what are 
-their risks and advantages.
+Their strengths stem from  their colossal training datasets and billions of parameters (model weights) that can be adjusted during training and are fine-tuned to get the model proficient in specific tasks such as sentence completion and context-driven decision-making.
 
-## What is a Large Model?
+For Ultimate, this emerging technology allows for innovative ways of addressing user requests and providing solutions that operate contextually with minimal training needs, reducing the workload on human agents. 
 
-A large model is typically a model trained on vast amounts of data, and it has billions of parameters. Model parameters are trainable
-variables (model weights) that are adjusted during training. In order to tune these weights in a way that a certain mathematical
-operation over them would result in specific output, required lots of computation power and examples to show to these models.
-Usually these models make a prediction such as completing a sentence given a part of it, and then look back at the correct
-sentence part and tune their parameters to create correct output. This iteration takes place for many rounds and on many samples
-combined to provide accurate results. However, this is not only option for training on a large corpora, but also different
-approaches such as masked language modelling, translation language modelling, etc. are available as well.
+> Recognising the transformative potential of LLMs, we actively integrated these models into our bots’ capabilities, enhancing our customer support automation platform. Our approach is twofold: embracing the innovative power of LLMs while remaining acutely aware of the challenges they present, such as the risk of generating inaccurate or 'hallucinated' information. 
 
-In order to achieve good results, typical pipeline of training includes following steps:
-1. Pre-training on large corpora
-2. Fine-tuning:
-   1. Fine-tuning on specific set of tasks
-   2. Instruction fine-tuning
-3. Alignment using feedbacks
+Ultimate’s success in managing these risks is deeply rooted in our early investment into traditional AI technologies such as Intent classification models and range of NLP models. This solid foundation helped us to craft an unique hybrid approach that merged established AI practices with novel functionalities of LLMs. This strategic blend not only minimized risks but also played a pivotal role in gradually fostering customer confidence in LLMs.
+
+## Training a LLM
+
+The first step in a typical training pipeline involves training an extensive collection of samples, which undergo specific preprocessing steps for cleaning, giving the model its understanding of the world and its fundamental linguistic knowledge. This step is considered one of the most resource-intensive and both time and cost can be limiting factors here.
+
+The fine-tuning phase focuses on training a language model for specific Natural Language Processing (NLP) tasks, such as sentiment analysis, question answering, translation, and more. Mastering these basic tasks is crucial for the LLM to be able to understand instructions and be competent enough to apply them. Essentially the model is specializing through practice.
+
+Alignment is one of the most critical steps in the training pipeline and usually comes last. This phase is mostly concerned with aligning the model with human preferences. Addressing biases is particularly significant in this step to ensure these models resonate with our values and expectations.
 
 ![Model Training flow](/assets/img/posts/model_training.png)
+{: .text-center}
 
-First step consists of just training on a huge number of samples that are just collected and cleaned in specific preprocessing steps.
-This step which is one of most costly ones takes more time, cost and also considerations should be applied as well.
-Fine-tuning on set of tasks which comes next is concerned with training a language model with specific NLP tasks such as sentiment analysis,
-question answering, translation, etc. These tasks that are also as basic tasks that LLM should be able to perform is essential for its
-understanding of instructions and being competent enough to apply them.
+The challenge of training models, taking into account their size and significant dependence on vast datasets, proves to be a major hurdle for many companies seeking to harness their capabilities. To address this, prominent tech companies, both large corporations and startups, have entered the scene, offering services for these models known as AI Service Providers, delivering AI as a Service (AIaaS). Notable entities in this domain include OpenAI, Google, Microsoft, and Amazon, recognized as major players in the field. Additionally, other companies and startups, such as Anthropic, are also offering similar services, each with distinct qualities and features.
 
-Alignment is also one of the most important steps that comes usually last! This step in training pipeline is mostly concerned with 
-aligning the model with human preferences. Bias is one of the most significant topics in this case as well.
+In contrast, the open-source AI community is actively pursuing the democratization of Large Language Models (LLMs). The recent model releases from this community offer a glimpse of a promising future for the democratization of AI.
 
-## LLM capabilities
+At Ultimate, our focus goes beyond just addressing specific issues with these tools. We aim to offer solutions in over 100 languages while maintaining ethical standards. Our solution is designed to handle user queries in both single and multiple languages, as well as across languages. A cross-lingual approach means processing information in a language different from the user's native language. Our priority is to provide secure and ethical responses, ensuring accuracy and  avoiding hallucinations while effectively resolving the user's inquiry.
 
-One might think large language models as described, are just completing the sentences. This is true, but they also have other
-capabilities that make them unique. For example, you can consider an example where a LLM tries to answer a question according to 
-given information. Depending on the competency of the LLM, it might not only use the given information, but also use its own world-knowledge
-that it gained during different steps of training. World knowledge helps it to know what is right in the context and what is not.
+Responding to users with a tone of voice that matches the brand is equally crucial as providing accurate information. This task becomes more challenging when dealing with not just one language but over 100 languages. Maintaining language neutrality and upholding it as a core feature of our product demanded extensive research and development efforts, especially in the face of emerging technologies.
 
-Specific tasks, especially mathematical ones, are very helpful too, because they help model to have at least a basic understanding of the 
+![Model Training flow](/assets/img/posts/llm_tone-of-voice.png)
+{: .text-center .border-image}
 
-Regardless of these main capabilities, the main ones can be considered as comprehension, world knowledge, reasoning, and tool usage.
+When working on the tone of voice, our bots would sometimes get a bit too sassy.
+{: .img-description}
 
-![Model Training flow](/assets/img/posts/llm.png)
+While research plays a vital role in our strategy, we have also developed a scalable solution to meet the needs of a large customer base. Delivering a high-quality, scalable solution remains paramount for our company.
 
-# The Potential for Misinformation in GenAI: Hallucination
+## LLMs: AI Upgrade for a Smarter and Better Bots
 
-GenAI has the capacity to propagate misinformation due to its learning process. 
-These models acquire patterns from their training data, generating outputs that often mirror the learned patterns. 
-While the primary objective is pattern recognition, there are instances where these models inadvertently reproduce 
-the exact content they were trained on. 
-These gives rise to specific challenges, particularly concerning the rights and regulations associated with the training data. 
-The following scenarios illustrate the problematic nature of outputs directly derived from training data:
+Beyond sentence completion, large language models (LLMs) exhibit significant capabilities in information processing and knowledge application. Their proficiency in generating text sequences transcends simple context continuation, as they can leverage information from previous training stages to construct meaningful responses.
 
-1. **Copyrighted Material:** Instances where GenAI reproduces copyrighted intellectual property, such as books or paintings.
-  
-2. **Privacy Concerns:** Repeating back personal information, such as emails, bank account numbers, IBANs, etc. from training data.
+To illustrate, consider an LLM tasked with answering a question. It will not only access the immediate context but also draw upon its internal knowledge base, built during prior training across diverse datasets. This knowledge repository, encompassing factual information and world dynamics, enables the LLM to infer relationships and context-specific interpretations, leading tomore accurate and informative responses.
 
-Moreover, beyond these typical cases, there is a potential for fabrication. In specific instances, given the model's learned patterns, 
-it can create false narratives around individuals. This introduces a more severe problem where real individuals are portrayed inaccurately and 
-explained in a misleading manner.
+Furthermore, LLMs can extend their abilities beyond pure language to handle specific tasks, including mathematical computations. This demonstrates their capacity to develop rudimentary domain-specific knowledge and utilize it for targeted problem solving.
 
-Hallucination is a term used for this case. World knowledge is very useful when dealing with different types of problems but 
-on the other hand it can create hallucination as well. LLMs are prune to hallucination because they might have gained some world knowledge
-during training and sometimes, this knowledge is either very shallow or false.
+> In essence, the core strengths of LLMs lie in their ability to comprehend and integrate information, access and apply internal knowledge, and reason within contextual boundaries. This combination allows them to adapt and handle a wide range of information types and tasks with increasing sophistication.
 
-# Trends and future of LLMs
+The appeal of large language models (LLMs) lies in their evolving capacity to handle user requests through increasingly innovative methods. This motivates Ultimate to continually explore novel solutions that leverage the latest advancements in LLM technology. For instance, the deployment of zero-shot bots, capable of learning within context and bypassing conventional training processes, presents a promising approach to automating customer support tasks. Additionally, uGPT, our flagship LLM product, showcases remarkable generalization capabilities by offering pre-trained solutions that require minimal further customization. This feature positions uGPT as a practical option for clients seeking to reduce reliance on human agents.
 
-Earlier days of LLMs were mostly about text completion. A handy writing assistant was a very good name for these models. More advances
-on training schemes, training data, and newer approaches on modeling as well made them more capable. Now they are able to understand the context
-and with their in-context learning skills then can easily adapt to the given tasks without even being directly trained on them.
+## Misinformation in Generative AI: the challenges with hallucinations
 
-Emerging skills such as using tools and getting feedback from environment made them even more capable. They can use tools and even plan to
-how use them. Planning skills combined with self-correcting based on the output of the tool makes them good learners that in-context can solve complex
-problems with given tools. A LLM on its own might not be best tool to work with specific type of data (such as video), but with given tools 
-such as video transcripting, it can understand the context of the video and act accordingly. With more advanced tools such as code execution, they
-not only use tools, but also can write tools for themselves. Coding, which is one of the capabilities of these models helps them to create their own
-set of tools and also in cases where the software does not work as expected, they can find the issue and solve it.
+Generative AI possesses the potential to propagate misinformation as a result of its learning process. While the primary objective is pattern recognition, there are instances where LLMs replicate the exact content they were trained on, presenting challenges related to the rights and regulations governing the training data. Hence why Ultimate would never share any customer data with external parties to improve LLMs.
 
-These fascinating capabilities of LLMs made them a very good assistant in many terms. Coding assistants, daily personal assistants, even emotional companions
-are examples of how GenAI and LLMs in particular are taking a significant part in our lives.
+1. **Copyrighted Material**: Instances where GenAI reproduces copyrighted intellectual property, such as books or paintings.
+2. **Privacy Concerns**: Replicating personal information, such as emails, bank account numbers, IBANs, etc., from the training data.
+
+Beyond these cases, where outputs are directly derived from training data, there is also the potential for fabricating false narratives and distorting reality, a  phenomenon known as "hallucination".
+
+While the LLM’s acquired knowledge of the world is beneficial in dealing with various problems, it is a double edged sword as it may have acquired knowledge during training that is either very shallow, biased or simply false, making LLMs prone to hallucinate.
+
+Addressing hallucinations was crucial in the  development of UltimateGPT (uGPT), to ensure our bots give accurate answers.
+
+![Model Training flow](/assets/img/posts/llm-hallucination.png)
+{: .text-center .border-image}
+
+Early release of uGPT - this phone number was entirely made up.
+{: .img-description}
+
+To address this we focussed our research extensively on distinguishing between casual customer small talk and customer queries that need factual responses. 
+We retrieve information from different sources like our customers' knowledge bases and put strict guard rails in place to ensure accurate answers and to combat hallucinations when users ask for information. 
+
+## Creating factual next generation customer service bots
+
+At Ultimate we build uGPT as a RAG (retrieval-augmented generation) system to harness the power of LLMs responsibly. 
+
+We incorporated a robust in-house IR (Information Retrieval) system, that is designed to retrieve information from diverse sources, incorporating various parameter settings like locale in a cross-lingual manner. This approach allows our customers to effortlessly import data from different sources and languages, enabling them to address user inquiries effectively. 
+
+To ensure the efficiency of this system, we compared its capabilities and performance to traditional IR systems. Quantifying success in this specific context posed challenges, leading us to employ diverse techniques such as user simulation to measure its effectiveness. Our results revealed it is significantly more performant. 
+
+Beyond the IR system itself, we established a pipeline to enrich queries with  additional context. This specific type of query expansion plays a pivotal role in enhancing response quality by generating answers not solely from a single source but from a combination of them.
+
+## Beyond Sentence Completion - the Evolution and Future of LLMs
+
+LLMs are evolving quickly. From their humble beginnings as handy writing assistants with a focus on sentence completion, their capabilities have significantly expanded. They now exhibit a deep understanding of context and employ in-context learning to adapt to various tasks without requiring specific training.
+
+LLMs can utilize tools, plan their application and  learn from environmental feedback, adjusting based on outcomes. Although a standalone LLM may not be optimal for certain data formats, like video, equipping them with tools such as video transcription allows them to understand and respond to video content effectively. Advanced functionalities, like code execution, empower LLMs not just to use existing tools but also to generate tools for themselves. The coding capabilities of these models allow them to create customized tools and troubleshoot issues when software does not function as expected.
+
+LLMs can be utilized to create agents that can strategize and leverage past experiences to devise more efficient solutions within their operational parameters. Additionally, they can refine their performance by incorporating self-assessment and self-critique mechanisms.
+
+![Model Training flow](/assets/img/posts/llm_agents.png)
+{: .text-center}
+
+Given these impressive capabilities, LLMs have become invaluable across a myriad of domains, ranging from coding to serving as everyday personal assistants. 
+
+One of our primary initiatives is developing the next generation of our uGPT product: zero-shot bots, aiming to get rid of intent training and expressions entirely. First tests have shown promising outcomes compared to traditional bots which still required explicit training. Within this context, we have explored the reasoning capacities of LLMs to enhance the explainability of our systems. Our objective extends beyond creating efficient but also transparent solutions; enabling our customers to understand and improve these models.
+
+## Conclusion
+
+At the forefront of AI advancements, LLMs continue to redefine possibilities and present significant potential but also call for careful consideration regarding responsible deployment. As LLMs increasingly integrate into our daily routines, it's essential to understand the technology, acknowledge its limitations, and prioritize ethical considerations. 
+
+A primary challenge in this domain is producing responses that are not only accurate and offer meaningful insights. Utilizing LLMs for automating customer service not only expedites problem-solving for users but also enables businesses to build enhanced solutions. 
+
+> RAG systems, such as uGPT, embrace the transformative potential of LLMs, while prioritizing factual accuracy and avoiding unreliable outputs. 
+
+With advancements in capabilities such as tool utilization and self-enhancement, GenAI and LLMs emerge as pivotal tools in effectively addressing user queries that demand accurate information and actionable responses. 
