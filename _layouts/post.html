@@ -24,7 +24,11 @@ layout: default
         </div>
         {% for author in site.data.blog_authors %}
         {% if page.author == author[1].name %}
-          <p class="text-center mt-2 mb-0">{{ author[1].name}}, {{author[1].role}}</p>
+          <p class="text-center mt-2 mb-0">
+            <a href="{{author[1].linkedin}}" target="_blank" class="author-link">
+              {{ author[1].name}}, {{author[1].role}}
+            </a>
+          </p>
         {% endif %}
         {% endfor %}
         <p class="text-center mt-0 mb-2">- {{page.date | date: "%B %Y"}} -</p>

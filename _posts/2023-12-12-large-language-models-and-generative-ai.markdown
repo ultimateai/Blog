@@ -2,9 +2,7 @@
 layout: post
 title:  "Demystifying LLMs: Ultimate’s take on Next-Gen Conversational AI"
 date:   2023-12-20
-description: "The rapidly evolving landscape of AI has witnessed an influx of new terminology, acronyms and buzzwords, such as GenAI, LLM, Prompt Engineering, and others. 
-<br />This article aims to demystify these terms, focussing on Large Language Models (LLMs), which have emerged as game-changers, blending technological prowess with vast capabilities. 
-<br />We will discuss their capabilities, how they are trained and look at both their risks and their potential as well as briefly touch on how Ultimate embraced these models to revolutionize customer Interactions."
+description: "The rapidly evolving landscape of AI has witnessed an influx of new terminology, acronyms and buzzwords, such as GenAI, LLM, Prompt Engineering, and others. This article aims to demystify these terms, focussing on Large Language Models (LLMs), which have emerged as game-changers, blending technological prowess with vast capabilities. We will discuss their capabilities, how they are trained and look at both their risks and their potential as well as briefly touch on how Ultimate embraced these models to revolutionize customer Interactions."
 categories: llm genai ai
 preview_image: /assets/img/posts/llm-overview.png
 author: "Meysam Asgari-Chenaghlu"
@@ -16,7 +14,7 @@ Large Language Models (LLMs) represent a distinct class of AI models, boasting u
 
 Their strengths stem from  their colossal training datasets and billions of parameters (model weights) that can be adjusted during training and are fine-tuned to get the model proficient in specific tasks such as sentence completion and context-driven decision-making.
 
-For Ultimate, this emerging technology allows for innovative ways of addressing user requests and providing solutions that operate contextually with minimal training needs, reducing the workload on human agents. 
+For [Ultimate](https://www.ultimate.ai/){:target="_blank"}, this emerging technology allows for innovative ways of addressing user requests and providing solutions that operate contextually with minimal training needs, reducing the workload on human agents. 
 
 > Recognising the transformative potential of LLMs, we actively integrated these models into our bots’ capabilities, enhancing our customer support automation platform. Our approach is twofold: embracing the innovative power of LLMs while remaining acutely aware of the challenges they present, such as the risk of generating inaccurate or 'hallucinated' information. 
 
@@ -49,7 +47,7 @@ When working on the tone of voice, our bots would sometimes get a bit too sassy.
 
 While research plays a vital role in our strategy, we have also developed a scalable solution to meet the needs of a large customer base. Delivering a high-quality, scalable solution remains paramount for our company.
 
-## LLMs: AI Upgrade for a Smarter and Better Bots
+## LLMs: AI Upgrade for Smarter and Better Bots
 
 Beyond sentence completion, large language models (LLMs) exhibit significant capabilities in information processing and knowledge application. Their proficiency in generating text sequences transcends simple context continuation, as they can leverage information from previous training stages to construct meaningful responses.
 
@@ -61,7 +59,7 @@ Furthermore, LLMs can extend their abilities beyond pure language to handle spec
 
 The appeal of large language models (LLMs) lies in their evolving capacity to handle user requests through increasingly innovative methods. This motivates Ultimate to continually explore novel solutions that leverage the latest advancements in LLM technology. For instance, the deployment of zero-shot bots, capable of learning within context and bypassing conventional training processes, presents a promising approach to automating customer support tasks. Additionally, uGPT, our flagship LLM product, showcases remarkable generalization capabilities by offering pre-trained solutions that require minimal further customization. This feature positions uGPT as a practical option for clients seeking to reduce reliance on human agents.
 
-## Misinformation in Generative AI: the challenges with hallucinations
+## Misinformation in Generative AI: the Challenges with Hallucinations
 
 Generative AI possesses the potential to propagate misinformation as a result of its learning process. While the primary objective is pattern recognition, there are instances where LLMs replicate the exact content they were trained on, presenting challenges related to the rights and regulations governing the training data. Hence why Ultimate would never share any customer data with external parties to improve LLMs.
 
@@ -72,7 +70,7 @@ Beyond these cases, where outputs are directly derived from training data, there
 
 While the LLM’s acquired knowledge of the world is beneficial in dealing with various problems, it is a double edged sword as it may have acquired knowledge during training that is either very shallow, biased or simply false, making LLMs prone to hallucinate.
 
-Addressing hallucinations was crucial in the  development of UltimateGPT (uGPT), to ensure our bots give accurate answers.
+Addressing hallucinations was crucial in the  development of [UltimateGPT (uGPT)](https://www.ultimate.ai/ultimategpt-chatgpt-for-customer-service){:target="_blank"}, to ensure our bots give accurate answers.
 
 ![Model Training flow](/assets/img/posts/llm-hallucination.png)
 {: .text-center .border-image}
@@ -83,7 +81,7 @@ Early release of uGPT - this phone number was entirely made up.
 To address this we focussed our research extensively on distinguishing between casual customer small talk and customer queries that need factual responses. 
 We retrieve information from different sources like our customers' knowledge bases and put strict guard rails in place to ensure accurate answers and to combat hallucinations when users ask for information. 
 
-## Creating factual next generation customer service bots
+## Creating Factual Next Generation Customer Service Bots
 
 At Ultimate we build uGPT as a RAG (retrieval-augmented generation) system to harness the power of LLMs responsibly. 
 
@@ -108,7 +106,7 @@ Given these impressive capabilities, LLMs have become invaluable across a myriad
 
 One of our primary initiatives is developing the next generation of our uGPT product: zero-shot bots, aiming to get rid of intent training and expressions entirely. First tests have shown promising outcomes compared to traditional bots which still required explicit training. Within this context, we have explored the reasoning capacities of LLMs to enhance the explainability of our systems. Our objective extends beyond creating efficient but also transparent solutions; enabling our customers to understand and improve these models.
 
-## Conclusion
+---
 
 At the forefront of AI advancements, LLMs continue to redefine possibilities and present significant potential but also call for careful consideration regarding responsible deployment. As LLMs increasingly integrate into our daily routines, it's essential to understand the technology, acknowledge its limitations, and prioritize ethical considerations. 
 

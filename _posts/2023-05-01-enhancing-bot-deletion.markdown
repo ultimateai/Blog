@@ -17,7 +17,7 @@ description: "Bot deletion is a critical path in our workflow. Almost all of our
               to the distributed architecture of the system."
 categories: backend events
 preview_image: /assets/img/posts/event-driven-setup_preview.png
-author: "Mohamed Abdelazim"
+author: "Mohamed Abd El-Azim"
 ---
 
 ## Our requirements for the solution
