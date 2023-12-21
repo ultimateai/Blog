@@ -18,3 +18,7 @@ simon:
     name: Simon Munch-Andersen
     role: Chief Technology Officer
     picture: /assets/img/faces/faces_simon.jpeg
+rob:
+    name: Roberto Gutiérrez Sopedra
+    role: Senior Plaform Engineer
+    picture: /assets/img/faces/faces_rob.jpeg
