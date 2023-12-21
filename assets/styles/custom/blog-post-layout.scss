@@ -59,5 +59,19 @@
   img {
     border-radius: 8px;
   }
+  .text-center {
+    text-align: center;
+  }
+  .border-image {
+    img {
+      border: 1px solid $secondaryText;
+    }
+  }
+  .img-description {
+    text-align: center;
+    color: $secondaryText;
+  }
+
+
 
 }

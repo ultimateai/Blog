@@ -1,18 +1,22 @@
 andras:
     name: András Beke
     role: Senior AI Researcher
+    linkedin: https://www.linkedin.com/in/andras-beke/
     picture: /assets/img/faces/faces_andras.jpeg
 demo:
     name: Demo Author
+    linkedin: https://www.linkedin.com/company/ultimate.ai/mycompany/
     role: Role in the Company
     picture: /assets/img/faces/faces_demo.png
 franzi:
     name: Franziska Hempel
     role: Director of Product Engineering
+    linkedin: https://www.linkedin.com/in/franziska-hempel-660695120/
     picture: /assets/img/faces/faces_franzi.jpg
 mohamed:
-    name: Mohamed Abdelazim
+    name: Mohamed Abd El-Azim
     role: Senior Backend Engineer
+    linkedin: https://www.linkedin.com/in/mohamed-abd-el-azeem-14943b101/
     picture: /assets/img/faces/faces_mohamed.jpeg
 simon:
     name: Simon Munch-Andersen
@@ -22,3 +26,10 @@ rob:
     name: Roberto Gutiérrez Sopedra
     role: Senior Plaform Engineer
     picture: /assets/img/faces/faces_rob.jpeg
+    linkedin: https://www.linkedin.com/in/roberto-guti%C3%A9rrez-sopedra-3935b6107/
+    picture: /assets/img/faces/faces_simon.jpeg
+meysam:
+    name: Meysam Asgari-Chenaghlu
+    role: Staff AI Researcher
+    linkedin: https://www.linkedin.com/in/meysam-ac/
+    picture: /assets/img/faces/faces_meysam.jpg

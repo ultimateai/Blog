@@ -2,19 +2,14 @@
 layout: post
 title:  "Language Detection - Tips and Tricks"
 date:   2023-01-21
-description: "In the last 5 years <strong>Ultimate.</strong> has grown from a monolingual Finnish solution to a powerful multilingual provider 
-                of AI for customer support. <br />
-                We released a new language-agnostic model type, allowing us to predict intents in 
-               more than 100 languages, regardless of the language of the training data. 
-               But while multilingual bots can now <strong>understand</strong> visitor messages 
-               in many languages, the bots also need to <strong>answer</strong> in the same 
-               language that the visitor used. <br />
-               This problem led us to build a solution that can detect the language of a given 
-               text. Although there are many ready-to-use solutions in the market, we realized 
-               that none of them fit our chat domain. Therefore, we have developed our own 
-               <strong>Language Detection Model</strong>.<br />
-               In this blog I’ll present our journey to creating the most accurate model in 
-               the field."
+description: "In the past 5 years, Ultimate has evolved from a monolingual Finnish 
+solution to a multilingual AI provider for customer support. We introduced a 
+language-agnostic model, enabling intent prediction in over 100 languages regardless of 
+language of the training data. However, while our bots understand various languages, 
+they needed to respond in the visitor's chosen language. This challenge led us to 
+develop our own Language Detection Model, as existing market solutions didn't fit 
+our chat domain. In this blog, I'll discuss our journey to creating the most accurate model 
+in the field."
 categories: language-detection ai
 preview_image: /assets/img/posts/language-detection.png
 author: "András Beke"

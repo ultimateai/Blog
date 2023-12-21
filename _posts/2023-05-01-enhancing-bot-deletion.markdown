@@ -1,23 +1,18 @@
 ---
 layout: post
-title:  "Enhancing bot deletion through an event-driven setup"
-date:   2023-05-01
-description: "Bot deletion is a critical path in our workflow. Almost all of our data 
-              is related to bots in one way or another, so deleting a bot is a process 
-              that can run for quite some time.<br />
-              But, why is this a problem? Our system is distributed in nature, which 
-              means that we have multiple compute blocks running in the cloud, and that 
-              makes our system prone to issues like losing nodes for network partitions etc.
-              Moreover, the deletion is initiated from our frontend client. Keeping the 
-              request alive until the entire deletion process is done is not an option 
-              since in most cases the request will simply time out.<br />
-              We needed a solution that can guard us against such issues. Our process 
-              should be initiated without keeping the client waiting for a response, and 
-              should be able to recover from failures that are very likely to happen due 
-              to the distributed architecture of the system."
+title:  "Enhancing Bot Deletion through an Event-Driven Setup"
+date:   2023-07-01
+description: "Bot deletion is essential in our workflow, but as almost all of our data 
+              is related to bots, the deletion process can run for quite some time.
+              Our distributed system has multiple compute blocks running in the cloud, 
+              making it prone to issues like losing nodes for network partitions etc.
+              As the deletion is initiated from our frontend client, keeping the 
+              request alive until the entire deletion process is done might result in time outs.
+              We needed a solution that does not keep the client waiting for a response, and 
+              can recover from failures."
 categories: backend events
 preview_image: /assets/img/posts/event-driven-setup_preview.png
-author: "Mohamed Abdelazim"
+author: "Mohamed Abd El-Azim"
 ---
 
 ## Our requirements for the solution
