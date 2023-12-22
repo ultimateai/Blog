@@ -21,6 +21,7 @@ mohamed:
 simon:
     name: Simon Munch-Andersen
     role: Chief Technology Officer
+    linkedin: https://www.linkedin.com/in/simonma/
     picture: /assets/img/faces/faces_simon.jpeg
 rob:
     name: Roberto Gutiérrez Sopedra
