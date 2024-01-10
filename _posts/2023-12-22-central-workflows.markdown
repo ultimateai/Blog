@@ -7,7 +7,7 @@ description: "GitHub actions are a central piece on our CI/CD system. We've been
               Composite actions and reusable workflows were in our radar - but only intra-repo (using the same workflow to deploy to dev, stage and prod on different scenarios). In this post you will find how our journey started, which problems we solved and how does our future look like"
 categories: CI/CD pipelie
 preview_image: /assets/img/posts/reusable_workflows_preview.png
-author: "Roberto Gutiérrez"
+author: "Roberto Gutiérrez Sopedra"
 ---
 
 ## The start of the CI/CD journey in GitHub, or why a distributed CI/CD system can be a bad idea
@@ -67,16 +67,16 @@ Initially, callable workflows were limited to public or internal repos, excludin
 
 
 For your first workflow, just follow these steps:
-1. Create a new repository
-2. Develop a new workflow under .github/workflow, with the following condition:
-```
+###### 1. Create a new repository
+###### 2. Develop a new workflow under .github/workflow, with the following condition:
+```yaml
 on:
   workflow_call:
 ```
 
-3. Add any reusable job you need. In our case, linting the PR title was one of our simplest workflows:
+###### 3. Add any reusable job you need. In our case, linting the PR title was one of our simplest workflows:
 
-```
+```yaml
 name: "Lint PR title"
 
 on:
@@ -136,8 +136,8 @@ jobs:
 ```
 Don't feel overwhelmed, this just lints the PR title, making sure developers follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-4. Call this workflow from wherever you want, you don't even need to merge:
-```
+###### 4. Call this workflow from wherever you want, you don't even need to merge:
+```yaml
 name: "Lint PR title"
 
 on:
