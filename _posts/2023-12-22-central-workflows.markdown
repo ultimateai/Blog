@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "DRY in GitHub Actions with reusable workflows"
-date:   2023-12-22
-description: "GitHub actions are a central piece on our CI/CD system. We've been using it for less than 2 years (migration from bibucket) - but since minute 1 it was clear for us it was fundamental to focus on scalability and usability<br />
-              Before jumping into features and complex scripting, we talked about the arquitecture - how would it look like for a developer to start working on a new repository, and how would it look for us to deal with a new feature or fix on existing workflows<br />
+title:  "DRY IN GITHUB ACTIONS WITH REUSABLE WORKFLOWS"
+date: 2024-01-15
+description: "GitHub Actions is a central piece on our CI/CD system. We've been using it for less than 2 years (migration from bibucket) - but since minute 1 it was clear for us it was fundamental to focus on scalability and usability<br />
+              Before jumping into features and complex scripting, we talked about the architecture - how would it look like for a developer to start working on a new repository, and how would it look for us to deal with a new feature or fix on existing workflows<br />
               Composite actions and reusable workflows were in our radar - but only intra-repo (using the same workflow to deploy to dev, stage and prod on different scenarios). In this post you will find how our journey started, which problems we solved and how does our future look like"
 categories: CI/CD pipelie
-preview_image: /assets/img/posts/reusable_workflows_preview.png
+preview_image: /assets/img/posts/reusable-workflows_preview.png
 author: "Roberto Gutiérrez Sopedra"
 ---
 
@@ -14,9 +14,9 @@ author: "Roberto Gutiérrez Sopedra"
 
 Amidst the CI/CD journey in GitHub, our initial transition from Bitbucket was marked by a deliberate and gradual pace. Initially, we had a handful of repositories for select microservices. ArgoCD was already an integral part of our deployment with Bitbucket, and our early CI/CD setup in GitHub reflected simplicity with the following architecture:
 
-![initial_architecture_diagram](../assets/img/posts/reusable-workflows_initial_arquitecture.png)
+![initial_architecture_diagram](../assets/img/posts/reusable-workflows_initial_architecture.png)
 
-Having a look at this distrubuted architecture we can find some strong points to discuss
+Having a look at this distributed architecture we can find some strong points to discuss
 
 **Pros:**
 
@@ -42,7 +42,7 @@ Having a look at this distrubuted architecture we can find some strong points to
 
 As platform engineers, enhancing developers' experience falls within our responsibilities. We opted to address these "cons" collaboratively with the developers.
 
-## Decisions, decisions, decisions
+## Decisions, Decisions, Decisions
 
 For many of us, it became evident that the distributed CI/CD system lacked scalability, with the cons significantly outweighing the pros. The decision to explore a centralized solution led us to consider [reusable workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows). 
 However, achieving a central solution meant reaching a consensus with the developers to harmonize their practices as much as possible. While reusable workflows offered high customizability, our focus was on establishing a unified approach. Our role was more about guidance and advice, avoiding the imposition of a "better way, trust me."
@@ -55,7 +55,7 @@ Recognizing the need for continuous improvement, we didn't aim for perfection fr
 
 3. **Staging Environment Deployment:** When is the suitable time for a deployment to the "stage" environment?
 
-4. **Production Environment Deployment:** When is it appropriate for a deployment to the "prod" environment? Should everyone have the ability to deploy to prod, and are there any time constraints (e.g., avoiding deployments on Fridays)?
+4. **Production Environment Deployment:** When is it appropriate for a deployment to the "production" environment? Should everyone have the ability to deploy to production, and are there any time constraints (e.g., avoiding deployments on Fridays)?
 
 5. **Deployment Announcements:** How should a deployment to prod be announced?
 
@@ -158,7 +158,7 @@ jobs:
 Ideally, once a workflow is tested and you're happy with it, you should merge it to the main branch and create a new release - which is what developers should be using, releases! 
 
 For your nth workflow/feature, just follow these steps:
-1. Have a dummy microservice repository to do every kind of destructive testing
+1. Have a dummy microservice repository to do every kind of destructive testing.
 2. Never merge to main in your central-workflows repo without testing, it's the key piece for CI/CD. 
 
 Summing up: 
@@ -169,23 +169,23 @@ Summing up:
 ![central_CICD_system](../assets/img/posts/reusable-workflows_central_workflows.png)
 
 
-To give you a more precised look, our CI/CD system from a developers POV: 
+To give you a more precise look, our CI/CD system from a developers POV: 
 
 ![developers POV](../assets/img/posts/reusable-workflows_developers-POV.png)
 
 
-In simpler terms, the process is entirely automated, unified and customized to meet the developers' requirements. Numerous changes, new features, and fixes have been introduced through various releases. However, the central workflows enable us to provide a solution that evolves rapidly while allowing developers to choose their own pace—some are content with version 0.17.0, while others prefer 0.18.19. As time progressed, the frequency of fixes diminished, allowing us to shift our focus to introducing new features that may not be universally needed by all developers, and that's perfectly acceptable.
+In simpler terms, the process is entirely automated, unified and customized to meet the developers' requirements. Numerous changes, new features, and fixes have been introduced through various releases. Moreover, the central workflows enable us to provide a solution that evolves rapidly while allowing developers to choose their own pace—some are content with version 0.17.0, while others prefer 0.18.19. As time progressed, the frequency of fixes diminished, allowing us to shift our focus to introducing new features that may not be universally needed by all developers, and that's perfectly acceptable.
 Some of our newest features include:
-1. Better caching
+1. Better caching.
 2. Slack notifications (And improved slack notifications)
-3. GAR support
-4. Customizable NPM version
-5. Improved e2e tests result communication
-6. Automation of Changelog
-7. Multiple application - one repo support. 
+3. GAR support.
+4. Customizable NPM version.
+5. Improved e2e tests result communication.
+6. Automation of Changelog.
+7. Multiple applications - one repo support. 
 ...
 
-## What's in the horizon
+## What's on the horizon
 New releases are happening weekly at least, but I'd see our three major focuses for the mid-term future would be:
 
 1. **Dynamic/Preview Environments:** The era of testing locally is so 2020. We envision a future where creating a PR automatically generates a temporary environment, 100% equivalent to dev, enabling developers to experiment freely.
