@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "DRY IN GITHUB ACTIONS WITH REUSABLE WORKFLOWS"
+title:  "DRY in Github Actions with Reusable Workflows"
 date: 2024-01-15
-description: "GitHub Actions is a central piece on our CI/CD system. We've been using it for less than 2 years (migration from bibucket) - but since minute 1 it was clear for us it was fundamental to focus on scalability and usability<br />
-              Before jumping into features and complex scripting, we talked about the architecture - how would it look like for a developer to start working on a new repository, and how would it look for us to deal with a new feature or fix on existing workflows<br />
-              Composite actions and reusable workflows were in our radar - but only intra-repo (using the same workflow to deploy to dev, stage and prod on different scenarios). In this post you will find how our journey started, which problems we solved and how does our future look like"
-categories: CI/CD pipelie
+description: "GitHub Actions are central to our CI/CD system since we adopted them less than two years ago. We prioritized scalability and usability from day one. Before jumping into features and complex scripting, we planned the architecture with a focus on the developer experience when starting a new repository or integrating new features or fixes into existing workflows. We considered composite actions and reusable workflows - but only intra-repo (using the same workflow to deploy to dev, stage and prod on different scenarios). This post outlines our journey, the challenges we overcame, and our future outlook."
+categories: CI/CD pipeline
 preview_image: /assets/img/posts/reusable-workflows_preview.png
 author: "Roberto Gutiérrez Sopedra"
 ---
