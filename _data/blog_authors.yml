@@ -23,6 +23,11 @@ simon:
     role: Chief Technology Officer
     linkedin: https://www.linkedin.com/in/simonma/
     picture: /assets/img/faces/faces_simon.jpeg
+rob:
+    name: Roberto Gutiérrez Sopedra
+    role: Senior Plaform Engineer
+    picture: /assets/img/faces/faces_rob.jpeg
+    linkedin: https://www.linkedin.com/in/roberto-guti%C3%A9rrez-sopedra-3935b6107/
 meysam:
     name: Meysam Asgari-Chenaghlu
     role: Staff AI Researcher
