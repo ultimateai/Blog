@@ -30,7 +30,7 @@ layout: html_minifier
   <meta name="twitter:description" content="{{ page.description }}">
   <meta
           name="twitter:image:src"
-          content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}"
+          content="{{ page.preview_image | absolute_url }}"
   >
 
   <!-- Facebook OpenGraph -->
@@ -39,7 +39,7 @@ layout: html_minifier
   <meta property="og:description" content="{{ page.description }}" />
   <meta
           property="og:image"
-          content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}"
+          content="{{ page.preview_image | absolute_url }}"
   />
 
   <!--  Fonts and icons -->
