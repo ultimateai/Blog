@@ -2,10 +2,10 @@
 layout: post
 title:  "What we learned building our Ultimate developer portal"
 date: 2024-01-23
-description: "GitHub Actions are central to our CI/CD system since we adopted them less than two years ago. We prioritized scalability and usability from day one. Before jumping into features and complex scripting, we planned the architecture with a focus on the developer experience when starting a new repository or integrating new features or fixes into existing workflows. We considered composite actions and reusable workflows - but only intra-repo (using the same workflow to deploy to dev, stage and prod on different scenarios). This post outlines our journey, the challenges we overcame, and our future outlook."
+description: "Our story of searching for good tooling around public APIs documentation, and deciding to write it ourselves."
 categories: CI/CD pipeline
 preview_image: /assets/img/posts/reusable-workflows_preview.png
-author: "Damian Bojar & Amit Jakubowicz"
+author: "Damian Bojar"
 ---
 
 ## Developer portal who?
@@ -23,12 +23,12 @@ I kicked off the project by listing the requirements for a perfect solution:
 - support for automatic Swagger upload from various repositories
 - not too expensive
 
-Right away, we dove deep into what's out there already. After exploring some of of the most popular solutions like SwaggerHub, Redocly, or Stoplight, We concluded that we have to write it ourselves. This was far from the ideal outcome from the research phase, but every solution had different problems. It seems that most of the products on the market went in the direction of having too many features in them, from organizing Jira tickets straight to managing infrastructure. At the same time, we did not see many tools with clear focus on customer-facing documentation. The tools we did like were quite expensive and most of the time scaled the monthly price with number of users. With over 20 engineers using the tool and our growth plans, having this kind of cost scaling was just not in the starts for us. The requirements were strict and we did not want to compromise on quality.
+Right away, we dove deep into what's out there already. After exploring some of the most popular solutions like SwaggerHub, Redocly, or Stoplight, We concluded that we have to write it ourselves. This was far from the ideal outcome from the research phase, but every solution had different problems. It seems that most of the products on the market went in the direction of having too many features in them, from organizing Jira tickets straight to managing infrastructure. At the same time, we did not see many tools with clear focus on customer-facing documentation. The tools we did like were quite expensive and most of the time scaled the monthly price with number of users. With over 20 engineers using the tool and our growth plans, having this kind of cost scaling was just not in the starts for us. The requirements were strict and we did not want to compromise on quality.
 
 
 ## The big decision
 
-While writing the solution yourself there is a high initial cost, it would pay for itself with time. It also meant that we would be able to have something that fulfills all of our needs. To kickstart the project we decided to go with a free template and make it our own. The first question we have to answer is how do we write the articles. After doing brief research on best practices, it was clear that we should keep the documentation and markdown format. The markdown format enables developers to focus purely on content while styling it and keeping a uniform design is up to the portal itself. This would also mean that we simply use it to Version Control the articles, this already solved the issue of having a solid process to publish new content. The next part was getting the Swagger in there, having the project in GitHub meant that it was very easy to enrich actions on other repositories to push the Swagger into the developer portal repository. All that's left is for the front end to properly style it and implement the features we need.
+While writing the solution yourself, there is a high initial cost, it would pay for itself with time. It also meant that we would be able to have something that fulfills all of our needs. To kickstart the project we decided to go with a free template and make it our own. The first question we have to answer is how do we write the articles. After doing brief research on best practices, it was clear that we should keep the documentation and Markdown format. The Markdown format enables developers to focus purely on content while styling it and keeping a uniform design is up to the portal itself. This would also mean that we simply use it to Version Control the articles, this already solved the issue of having a solid process to publish new content. The next part was getting the Swagger in there, having the project in GitHub meant that it was very easy to enrich actions on other repositories to push the Swagger into the developer portal repository. All that's left is for the front end to properly style it and implement the features we need.
 
 ## Challenges we faced
 
@@ -43,7 +43,7 @@ a different sub-menu for general articles and tutorials. The general articles go
 
 ## Closing thoughts
 
-It's been a long road with the Developer Portal, but the work makes the reward even sweeter. Once the project is ready there are no monthly payments, limitations on users, and the portal is there to last. The maintenance cost is next to nothing. No new features will come for free but having developed all the features we actually care about is like having a tailor made suit. We are able to align our processes as we like with code review, content reviews, version control and automatization with Github actions. I would wholeheartedly recommend this approach to anyone if they prioretise long therm benefits over having something out quick. Please feel free to reach out to us if you have any questions. 
+It's been a long road with the Developer Portal, but the work makes the reward even sweeter. Once the project is ready there are no monthly payments, limitations on users, and the portal is there to last. The maintenance cost is next to nothing. No new features will come for free but having developed all the features we actually care about is like having a tailor made suit. We are able to align our processes as we like with code review, content reviews, version control and aromatization with Github actions. I would wholeheartedly recommend this approach to anyone if they prioritise long therm benefits over having something out quick. Please feel free to reach out to us if you have any questions. 
 
 
 
