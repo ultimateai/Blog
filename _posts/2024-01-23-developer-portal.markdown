@@ -4,7 +4,7 @@ title:  "What we learned building our Ultimate developer portal"
 date: 2024-01-23
 description: "Our story of searching for good tooling around public APIs documentation, and deciding to write it ourselves."
 categories: CI/CD pipeline
-preview_image: /assets/img/posts/reusable-workflows_preview.png
+preview_image: /assets/img/posts/DeveloperPortal_What_We_Learned.png
 author: "Damian Bojar"
 ---
 
