@@ -3,8 +3,8 @@ layout: post
 title:  "What we learned building our Ultimate developer portal"
 date: 2024-01-23
 description: "Our story of searching for good tooling around public APIs documentation, and deciding to write it ourselves."
-categories: CI/CD pipeline
-preview_image: /assets/img/posts/DeveloperPortal_What_We_Learned.png
+categories: Events
+preview_image: /assets/img/posts/DeveloperPortal_What_We_Learned.jpg
 author: "Damian Bojar"
 ---
 
@@ -43,7 +43,7 @@ a different sub-menu for general articles and tutorials. The general articles go
 
 ## Closing thoughts
 
-It's been a long road with the Developer Portal, but the work makes the reward even sweeter. Once the project is ready there are no monthly payments, limitations on users, and the portal is there to last. The maintenance cost is next to nothing. No new features will come for free but having developed all the features we actually care about is like having a tailor made suit. We are able to align our processes as we like with code review, content reviews, version control and aromatization with Github actions. I would wholeheartedly recommend this approach to anyone if they prioritise long therm benefits over having something out quick. Please feel free to reach out to us if you have any questions. 
+It's been a long road with the Developer Portal, but the work makes the reward even sweeter. Once the project is ready there are no monthly payments, limitations on users, and the portal is there to last. The maintenance cost is next to nothing. No new features will come for free, but having developed all the features we actually care about is like having a tailor-made suit. We are able to align our processes as we like with code review, content reviews, version control and aromatization with Github actions. I would wholeheartedly recommend this approach to anyone if they prioritise long-term benefits over having something out quick. Please feel free to reach out to us if you have any questions. 
 
 
 
