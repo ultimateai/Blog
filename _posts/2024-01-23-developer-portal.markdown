@@ -2,7 +2,7 @@
 layout: post
 title:  "What we learned building our Ultimate developer portal"
 date: 2024-01-23
-description: "Our story of searching for good tooling around public APIs documentation, and deciding to write it ourselves."
+description: "Have you ever looked into tools for public APIs documentation? Noticed any patterns? We have, and would love to tell you all about it. This is our story of searching for good tooling around public APIs documentation, and deciding to write it ourselves."
 categories: Events
 preview_image: /assets/img/posts/DeveloperPortal_What_We_Learned.png
 author: "Damian Bojar"
