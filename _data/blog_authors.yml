@@ -33,3 +33,8 @@ meysam:
     role: Staff AI Researcher
     linkedin: https://www.linkedin.com/in/meysam-ac/
     picture: /assets/img/faces/faces_meysam.jpg
+damian:
+    name: Damian Bojar
+    role: Backend Chapter Lead
+    linkedin: https://www.linkedin.com/in/bojar-damian
+    picture: /assets/img/faces/faces_damian.jpeg
