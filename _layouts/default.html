@@ -6,41 +6,35 @@ layout: html_minifier
 <html lang="{{ site.lang | default: "en-US" }}">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKZ0V6RWVC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  {% if jekyll.environment == "production" %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKZ0V6RWVC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-MKZ0V6RWVC');
-  </script>
+      gtag('config', 'G-MKZ0V6RWVC');
+    </script>
+  {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{ site.data.settings.basic_settings.favicon_image | relative_url }}">
 
   <!-- Page Info -->
-  <link rel="shortcut icon" href="{{ site.data.settings.basic_settings.favicon_image | relative_url }}">
   <title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
   <meta name="description" content="{{ page.description }}">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title"
-    content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta
-          name="twitter:image:src"
-          content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}"
-  >
+  <!-- Facebook Open Graph Tags -->
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}">
 
-  <!-- Facebook OpenGraph -->
-  <meta property="og:title"
-    content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta
-          property="og:image"
-          content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}"
-  />
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
+  <meta name="twitter:description" content="{{page.description}}">
+  <meta name="twitter:image" content="{% if page.preview_image %}{{ page.preview_image | absolute_url }}{% else %}{{ page.featured_image | absolute_url }}{% endif %}">
 
   <!--  Fonts and icons -->
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
