@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Open Sourcing our Skills and Competency Matrix"
-date:   2024-01-18
-description: "We're excited to open source our skills and competency matrix for others to use. In this post we share the challenges we faced with earlier iterations, such as integrating our company values and adapting the matrices to evolving roles, which led us to creating a modular system that caters to diverse roles and career paths while aligning seniority expectations across the RnD department."
+title:  "Open Sourcing our Skill and Competency Matrix"
+date:   2024-02-05
+description: "We're excited to open source our skill and competency matrix for others to use. In this post we share the challenges we faced with earlier iterations, such as integrating our company values and adapting the matrices to evolving roles, which led us to creating a modular system that caters to diverse roles and career paths while aligning seniority expectations across the RnD department."
 categories: personal-growth management
 preview_image: /assets/img/posts/matrix-preview.png
 author: "Franziska Hempel"
@@ -10,7 +10,7 @@ author: "Franziska Hempel"
 
 ## The Path to Creating our Matrix
 
-Our journey in creating a skills and competency matrix in RnD went through many stages.
+Our journey to create a skill and competency matrix in RnD went through many stages.
 Initially we started with a focus on our company values - <a href="/about#how-we-work-our-values" title="Read more about our core company values">Trust, Impact, Customer Success, and Ethics</a> - and used those as a foundation to describe seniority and career progression within the company.
 We described how employees demonstrate **Trust** in their decisions and build trust within and outside the company or how they grow their influence and **Impact** from task-level contributions to organization-wide initiatives.
 
@@ -22,7 +22,7 @@ For example, the value of **Impact** could translate into numerous skills and co
 To address this, we looked at how other companies were approaching career growth  and performance frameworks.
 In Engineering we adopted the [Engineering Competency Matrix open sourced by Circle CI](https://docs.google.com/spreadsheets/d/131XZCEb8LoXqy79WWrhCX4sBnGhCM1nAIz4feFZJsEo/edit#gid=0){:target="_blank"}. This matrix provided clear skill areas for engineers, scaling them across six levels, and was a much better tool for discussing growth and progression. As this matrix is specifically designed for Engineering, other teams in the department adopted different matrices.
 The Design Team used [Figma’s career level descriptions](https://www.figma.com/file/2dWuprgltGoSTjya6DsMmZ/Figma-Product-Design-%26-Writing-Career-Levels-(Community)?type=whiteboard&node-id=2-287&t=7pNa6Uk55gn7kjR5-0){:target="_blank"} and adapted them to fit our six seniority levels, while the Product Management Team took inspiration from Markus Müller, who has led product teams at N26 and Circ.
-His  [skill matrix to grow, coach, assess, and hire product managers](https://medium.com/@markusmuller89/decoding-product-management-a-skill-matrix-to-grow-coach-assess-and-hire-world-class-pms-a385a4476866){:target="_blank"} was the foundation for the design of their skills and competency matrix.
+His  [skill matrix to grow, coach, assess, and hire product managers](https://medium.com/@markusmuller89/decoding-product-management-a-skill-matrix-to-grow-coach-assess-and-hire-world-class-pms-a385a4476866){:target="_blank"} was the foundation for the design of their skill and competency matrix.
 
 Within a few months we ended up with different matrices in the RnD department, lacking a clear alignment on what seniority and specific seniority levels mean to us. While we did see the need for role specific skills, we wanted comparability in seniority across the different roles and paths. Additionally we felt these matrices didn’t fully reflect our unique angle and  company values - the one thing we had liked about our original matrix.
 
@@ -58,7 +58,7 @@ We started by aligning on seniority levels to establish a common understanding a
         <tr>
             <td class="multiline">L5<br />(Advanced)</td>
             <td>within team</td>
-            <td class="multiline">L5s work independently within their team. They see problems and improvement areas in their team and can develop solutions with little guidance from others. At this stage L5s  start to specialise within a smaller area of their domain and actively share their knowledge with the team. They might start mentoring others, but their focus is still on the execution of work.</td>
+            <td class="multiline">L5s work independently within their team. They see problems and improvement areas in their team and can develop solutions with little guidance from others. At this stage L5s start to specialise within a smaller area of their domain and actively share their knowledge with the team. They might start mentoring others, but their focus is still on the execution of work.</td>
         </tr>
         <tr>
             <td class="multiline">L4<br />(Senior)</td>
@@ -69,12 +69,12 @@ We started by aligning on seniority levels to establish a common understanding a
         <tr>
             <td class="multiline">L3<br />(Staff / Head of)</td>
             <td>across several teams</td>
-            <td class="multiline">L3s are specialists within a broad set of areas. They focus on cross-team initiatives and work with stakeholders and peers across multiple teams to drive initiatives forward. They focus on the big problems and initiatives  and focus on enabling the teams they work with to take ownership.</td>
+            <td class="multiline">L3s are specialists within a broad set of areas. They focus on cross-team initiatives and work with stakeholders and peers across multiple teams to drive initiatives forward. They focus on the big problems and initiatives and focus on enabling the teams they work with to take ownership.</td>
         </tr>
         <tr>
             <td class="multiline">L2<br />(Principal / Director)</td>
             <td>across organisation</td>
-            <td class="multiline">L2s work with multiple teams within their department and stakeholders across the entire business, aligning the needs of different departments. They own larger scale initiatives and seek improvements for the teams they work with.</td>
+            <td class="multiline">L2s work with multiple teams within their department and stakeholders across the entire business, aligning the needs of different departments. They own larger scale initiatives and seek improvements for the teams they work with. They keep pushing teams towards greater goals and excellence and are challenging them to go beyond the status quo.</td>
         </tr>
     </tbody>
 </table>
@@ -90,13 +90,13 @@ We spent most of our time making sure we had very clear definitions of the senio
 
 > The outcome is a modular system that balances specificity with adaptability, making seniority across disciplines comparable while providing a practical base for feedback and growth discussions.
 >
-> **We're proud to open-source this matrix under the Creative Commons Attribution 4.0 International license (CC BY 4.0), available here [LINK WILL COME].**
+> **We're proud to open-source this matrix under the Creative Commons Attribution 4.0 International license (CC BY 4.0), [available here](https://docs.google.com/spreadsheets/d/1qiklXB_WLFjpvY0S1cr8wU5BqD8JFRIDsFnxpKiwCtI/edit?usp=sharing){:target="_blank"}.**
 
-By open-sourcing our skills and competency matrix, we aim to share a framework that adapts and evolves with the dynamic landscape of roles and responsibilities. We believe this matrix can be a valuable tool for other organizations seeking a flexible yet structured approach to employee development and evaluation.
+By open-sourcing our skill and competency matrix, we aim to share a framework that adapts and evolves with the dynamic landscape of roles and responsibilities. We believe this matrix can be a valuable tool for other organizations seeking a flexible yet structured approach to employee development and evaluation.
 
 ## Our Next Steps
 
-A framework like this is never really finished and needs to grow and change with the company, so the version of the skills and competency matrix we are open sourcing today is only a first step.
+A framework like this is never really finished and needs to grow and change with the company, so the version of the skill and competency matrix we are open sourcing today is only a first step.
 
 This matrix is part of a larger growth and development framework, which includes regular 1:1s, continuous feedback from peers, managers and stakeholders and a quarterly cycle to create and review personal growth plans for every employee.
 
