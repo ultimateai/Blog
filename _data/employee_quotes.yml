@@ -23,3 +23,8 @@ Rob:
   role: Senior Platform Engineer
   picture: /assets/img/faces/faces_rob.jpeg
   quote: You know those places with toxic finger-pointing, "my deployment couldn't have caused that, look elsewhere" and "I'm not going to help you because I'm busy"? Well, Ultimate is the opposite of that. Never have I felt alone, or blamed, or ignored. 
+Damian:
+  name: Damian Bojar
+  role: Backend Chapter Lead
+  picture: /assets/img/faces/faces_damian.jpeg
+  quote: Software development is a team sport, and I'm very proud of the team we build here at Ultimate.
