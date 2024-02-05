@@ -90,7 +90,8 @@ We spent most of our time making sure we had very clear definitions of the senio
 
 > The outcome is a modular system that balances specificity with adaptability, making seniority across disciplines comparable while providing a practical base for feedback and growth discussions.
 >
-> **We're proud to open-source this matrix under the Creative Commons Attribution 4.0 International license (CC BY 4.0), [available here](https://docs.google.com/spreadsheets/d/1qiklXB_WLFjpvY0S1cr8wU5BqD8JFRIDsFnxpKiwCtI/edit?usp=sharing){:target="_blank"}.**
+> **We're proud to open-source this matrix under the Creative Commons Attribution 4.0 International license (CC BY 4.0), 
+> <a href="https://docs.google.com/spreadsheets/d/1qiklXB_WLFjpvY0S1cr8wU5BqD8JFRIDsFnxpKiwCtI/edit?usp=sharing" target="_blank" onClick="gtag('event', 'skill_matrix');">available here</a>.**
 
 By open-sourcing our skill and competency matrix, we aim to share a framework that adapts and evolves with the dynamic landscape of roles and responsibilities. We believe this matrix can be a valuable tool for other organizations seeking a flexible yet structured approach to employee development and evaluation.
 
