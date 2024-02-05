@@ -30,6 +30,14 @@
     th {
         font-size: $table-body-font-size;
         white-space: nowrap;
+        &.multiline {
+          white-space: normal;
+        }
+        &.rowspan {
+          vertical-align: middle;
+          border-left: $table-border-width solid $table-border-color;
+          border-right: $table-border-width solid $table-border-color;
+        }
     }
 
 
