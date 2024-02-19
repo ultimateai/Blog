@@ -14,7 +14,6 @@ as a base, which we customized to fit our needs.
 - [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.7.3 or higher, including all development headers (check your Ruby version using `ruby -v`)
 - [RubyGems](https://rubygems.org/pages/download) (check your Gems version using `gem -v`)
 - [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/) (check versions using `gcc -v`,`g++ -v`, and `make -v`)
-- Ruby 3+ users must install the deprecated `webrick` gem with `gem install webrick`
 
 Check the detailed [installation guide for macOS here](https://jekyllrb.com/docs/installation/macos/).
 
@@ -22,7 +21,8 @@ Check the detailed [installation guide for macOS here](https://jekyllrb.com/docs
 
 - Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies.
 - If Bundler is not installed yet, you can do so by running `gem install bundler`. 
-- Run `jekyll serve` to start the Jekyll server.
+- Ruby 3+ users must install the deprecated `webrick` gem with `bundle add webrick`
+- Run `jekyll serve` to start the Jekyll server. 
 - The project will be served on [http://localhost:4000/](http://localhost:4000/)
 
 ---

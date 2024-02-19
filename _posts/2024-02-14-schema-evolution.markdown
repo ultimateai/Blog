@@ -4,7 +4,7 @@ title:  "Schema Evolution at Ultimate"
 date: 2024-02-14
 description: "In a fast-paced environment, it's important to keep your data model up to date, concise as well as backwards/forward compatible. This is our story of how we evolve our event schemas."
 categories: architecture
-preview_image: path/to/the/preview.png
+preview_image: /assets/img/posts/evolution.png
 author: "Yonatan Wilkof"
 link: "If this is a podcast link to where people can listen to it"
 ---
