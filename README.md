@@ -21,7 +21,8 @@ Check the detailed [installation guide for macOS here](https://jekyllrb.com/docs
 
 - Navigate to the blog directory in your terminal and run `bundle install` to install the dependencies.
 - If Bundler is not installed yet, you can do so by running `gem install bundler`. 
-- Run `jekyll serve` to start the Jekyll server.
+- Ruby 3+ users must install the deprecated `webrick` gem with `bundle add webrick`
+- Run `jekyll serve` to start the Jekyll server. 
 - The project will be served on [http://localhost:4000/](http://localhost:4000/)
 
 ---
