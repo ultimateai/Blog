@@ -41,8 +41,8 @@ However, the other two principles are also important. They are important because
 ### The schema registry
 A pretty common pattern to solve the problem of schema evolution is to use a schema registry. A schema registry has other benefits, such as message validation, but while important, those were not our focus.
 
-Kafka has native support for a [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html), however at Ultimate we Google Pub/Sub. 
-We opted for Google’s messaging system as it was already leveraged in other areas of the product, and as it is more native to our underlying infrastructure, which is also Google based. 
+Kafka has native support for a [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html), however at Ultimate we use Google Pub/Sub. 
+We opted for Google’s messaging system as it was already leveraged in other areas of the product in our Google based infrastructure. 
 While Google is making the first moves towards the idea of schema validation, as of that moment in time, Pub/Sub did not support full evolution semantics. 
 Therefore, in order to achieve the principles we focus on, we had to choose a technology and follow a paradigm that would effectively replace some of the missing functionalities of a registry.
 
