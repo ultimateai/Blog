@@ -2,7 +2,7 @@
 layout: post
 title:  "Schema Evolution at Ultimate"
 date: 2024-02-14
-description: "In a fast-paced environment, it's important to keep your data model up to date, concise as well as backwards/forward compatible. This is our story of how we evolve our event schemas."
+description: "Achieving a robust event-driven architecture is no easy feat, therefore  it's imperative to keep your data model up to date, concise as well as backwards/forward compatible. This is our story of how we evolve our event schemas."
 categories: architecture
 preview_image: /assets/img/posts/evolution.png
 author: "Yonatan Wilkof"
@@ -11,25 +11,27 @@ link: "If this is a podcast link to where people can listen to it"
 
 ### The case for schema evolution
 
-At Ultimate, we have been using event-based architecture for a while now. It has been a great way to decouple our systems and make them more resilient. 
-A key component of event-based architecture is the event schema. The event schema is the contract between the producer and the consumer of the event. It defines the structure of the event and the data that it contains.
-One of the challenges that we have anticipated would be the evolution of the event schemas. As our systems grow and change, the event schema needs to evolve as well. It is imperative, that said contracts do not break as properties are added, removed or changed.
+At Ultimate, we have been using event-based architecture for the last two years. 
+It has been a great way to decouple our systems and make them more resilient. A key component of event-based architecture is the event schema. 
+The event schema is the contract between the producer and the consumer of the event. It defines the structure of the event and the data that it contains. 
+One of the challenges that we have anticipated would be the evolution of the event schemas. As our systems grow and change, the event schema needs to evolve as well. 
+It is crucial that said contracts do not break as properties are added, removed or changed. 
 In this article, I will lay out the design that we have chosen, to help us navigate through the treacherous waters of schema evolution.
 
 ### The underlying messaging architecture
 
-In order to understand the design that we have chosen, it is important to understand the underlying messaging architecture that we have in place. We use Kafka as our messaging system. 
+In order to understand the design that we have chosen, it is important to understand the underlying messaging architecture that we have in place.
 As a general rule, we have a topic per business domain owned by a publisher which is, in most cases, a microservice.
 
-Take conversations for example: we have a topic called `conversations` and the `chat-orchestrator` microservice is the owner of that topic.
-All updates in the lifecycle of a conversation (i.e. conversation start / visitor sends messages / bot send message / conversation end) are published to that topic, and in order that they happened.
-As a consumer of this topic, a service can subscribe and infer what and when happened during that conversation.
+Take conversations for example: we have a topic called conversations and the chat-orchestrator microservice is the owner of that topic. 
+All updates in the lifecycle of a conversation (i.e. conversation start / visitor sends messages / bot send message / conversation end) are published to that topic, and in order that they happened. 
+As a consumer of this topic, a service can subscribe and infer what happened when during that conversation.
 
 ### The guiding principles
 
 The design that we have chosen is based on the following principles:
 - **Backwards compatibility**: New versions of the schema should be able to be consumed by old versions of the consumer, even if they do not parse new data points added over time.
-- **Forward compatibility**: Old versions of the schema should be able to be consumed by new versions of the consumer.- **Predictability**: Each topic should be tied to exactly one schema, even if it handles multiple events types. As such, a consumer can always know which schema to use when consuming from a topic.
+- **Forward compatibility**: Old versions of the schema should be able to be consumed by new versions of the consumer.
 - **Predictability**: Each topic should be tied to exactly one schema, even if it handles multiple events types. As such, a consumer can always know which schema to use when consuming from a topic.
 - **Conciseness**: The schema should be concise and easy to understand. An event should not contain any unnecessary data points.
 
@@ -39,19 +41,20 @@ However, the other two principles are also important. They are important because
 ### The schema registry
 A pretty common pattern to solve the problem of schema evolution is to use a schema registry. A schema registry has other benefits, such as message validation, but while important, those were not our focus.
 
-Kafka has native support to a [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html), however due to various reasons outside the scope of this article, we use Google Pub/Sub.
-While Google is making the first moves towards the idea of schema validation, as of that moment in time, Pub/Sub did not support full evolution semantics.
-Therefore, in order to achieve the principles we focus on, we had to choose a technology and follow a paradigm, that would effectively replace some of the missing functionalities of a registry.
+Kafka has native support for a [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html), however at Ultimate we Google Pub/Sub. 
+We opted for Google’s messaging system as it was already leveraged in other areas of the product, and as it is more native to our underlying infrastructure, which is also Google based. 
+While Google is making the first moves towards the idea of schema validation, as of that moment in time, Pub/Sub did not support full evolution semantics. 
+Therefore, in order to achieve the principles we focus on, we had to choose a technology and follow a paradigm that would effectively replace some of the missing functionalities of a registry.
 
 ### Protobuf
-In order to aid us in the process of schema evolution, we have chosen to use [Protobuf](https://developers.google.com/protocol-buffers) as our serialization format.
-Protobuf is a language-agnostic serialization format developed by Google. It is designed to be backwards and forwards compatible - which is achieved by a set of rules that the schema must adhere to.
-For example, you can add new fields to a message, but you cannot remove or change the type of existing field. All fields are optional by default, and you can add new fields without breaking the schema.
 
-In order to enforce said rules we rely heavily on [Buf](https://buf.build/), which is a tool that ties well with the Protobuf ecosystem and its rules.
-It supplies a set of pipeline actions that aid us in the process of schema evolution, such as linting and breaking change detection.
-Before every commit we verify that changes will retain compatability.
+In order to aid us in the process of schema evolution, we have chosen to use [Protobuf](https://developers.google.com/protocol-buffers) as our serialization format. Protobuf is a language-agnostic serialization format developed by Google. 
+It is designed to be backwards and forwards compatible - which is achieved by a set of rules that the schema must adhere to. 
+For example, you can add new fields to a message, but you cannot remove or change the type of existing field. 
+All fields are optional by default, and you can add new fields without breaking the schema.
 
+In order to enforce said rules we rely heavily on [Buf](https://buf.build/), a tool that ties well with the Protobuf ecosystem and its rules. 
+It supplies a set of pipeline actions that aid us in the process of schema evolution, such as linting and breaking change detection. Before every commit we verify that changes will retain compatibility.
 
 ```yaml
 name: buf-pull-request
@@ -81,9 +84,8 @@ jobs:
           input: 'src/proto'
           against: 'https://github.com/${GITHUB_REPOSITORY}.git#branch=main,subdir=src/proto'
 ```
-With the aid of such flow, we are able to do compile time message validation. That is, we do not validate message at publish time (as offered by schema registry), 
-but rather ensure that the code which serializes and deserializes the message is in line with the schema.
-
+With the aid of such a flow, we are able to do compile time message validation. 
+That is, we do not validate messages at publish time (as offered by schema registry), but rather ensure that the code which serializes and deserializes the message is in line with the schema.
 
 ### The Ultimate Design
 
@@ -143,30 +145,28 @@ message BotSubject {
 
 ```
 
-In the above example, we have a **BotSubject** for bot events. Subject in this case, correlates to the single schema attached to a topic, and can accommodate multiple event types. 
+In the above example, we have a **BotSubject** for bot events. Subject in this case, correlates to the single schema attached to a topic, and can accommodate multiple event types.
 
-Some of the properties such as `event_id`, `event_timestamp` are common to all events and handle event metadata.
+Some of the properties such as `event_id` and `event_timestamp` are common to all events and handle event metadata. 
 In addition, we added the `version` property, which is used to handle schema evolution. It is only incremented in the highly unlikely case of a breaking change.
 
-The `event_type` property is an enum that defines the type of the event, and it should  correlate to the concrete event that is published. In this case - a bot is either created, updated or deleted.
-Defining each one of these events separately and having the type as enum, unlocks the following;
+The `event_type` property is an enum that defines the type of the event, and it should correlate to the concrete event that is published. In this case - a bot is either created, updated or deleted. 
+Defining each one of these events separately and having the type as enum, unlocks the following advantages:
 1. Each event can be extended separately from the others.
-2. Adding new events types that are unknown at this stage can be done later.
+2. Adding new event types that are unknown at this stage can be done later.
 
-The `oneOf` operator is used to define the populate event data that are published, as event types are mutually exclusive.
-And event cannot denote both bot created and bot deleted at the same time, for example.
+The `oneOf` operator is used to define the populate event data that are published, as event types are mutually exclusive. 
+An event cannot denote both `BotCreated` and `BotDeleted` at the same time, for example. 
 Each property in the `oneOf` set correlates, as expected, to a business event that is published in the topic.
 
 ### Breaking Changes
-But what should we do in the case of a breaking change? 
+But, what should we do in the case of a breaking change?
 
-Schema evolution cannot help us there, as it is not possible to make a breaking change and still be backwards compatible.
+Schema evolution cannot help us there, as it is not possible to make a breaking change and still be backwards compatible. 
 In the case of a breaking change, we have to create a new topic with a new version of the subject. 
-We do this by creating a new subject under a new path (adhering to the naming convention of the protobuf package), and then creating a new corresponding topic.
-The new topic will be owned by the same microservice as the old topic, and it will be used to publish the new version of the event.
-After some time, the old topic, if necessary, can be dropped
+We do this by creating a new subject under a new path (adhering to the naming convention of the Protobuf package), and then creating a new corresponding topic. 
+The new topic will be owned by the same microservice as the old topic, and it will be used to publish the new version of the event. After some time, the old topic can be dropped.
 
 ### Conclusion
-In this article, I have laid out the design that we have chosen to help us navigate through the treacherous waters of schema evolution.
 Leveraging Protobuf and Buf has helped us to bridge the gap of the lack of a schema registry service.
 By following a certain set of rules and conventions, we are able to accommodate the ever-changing needs of our business, while moving fast and reliably.
