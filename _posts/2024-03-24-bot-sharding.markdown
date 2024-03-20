@@ -2,7 +2,7 @@
 layout: post
 title:  "Scalability & Efficiency in ML Inference Systems"
 date: 2024-03-18
-description: "Scalability and efficiency present considerable challenges in the field of ML model serving systems, particularly when operating and serving a multitude of AI models concurrently. These aspects are vital for our operation as well, since we manage hundreds to thousands of AI models. In this post, we will discuss our approach to handling these tasks within our inference system."
+description: "Scalability and efficiency present considerable challenges in the field of ML model serving systems, particularly when operating and serving a multitude of AI models concurrently. These aspects are vital for our operation as well, since we maintain thousands of AI models. In this post, we will discuss our approach to handling these tasks within our inference system."
 categories: [architecture, ml, scalability]
 preview_image: /assets/img/posts/bot-sharding-prev.png
 author: "Tunç Gültekin"
@@ -15,7 +15,7 @@ At Ultimate, in addition to LLMs and other Embedding models, our customers opera
 
 There are several strategies for hosting/serving ML models (equivalent to Bots in the Ultimate setting). Each strategy offers its unique advantages and disadvantages in terms of scalability and efficiency. In this article, I will succinctly explain different techniques, and present our approach designed to mitigate the limitations of other methods.
 
-### Approach-1: Distinct Web Service Deployments for Each Bot
+### Approach 1: Distinct Web Service Deployments for Each Bot
 
 The most straightforward approach for serving ML models is deploying a **unique web service** for each, in which an ML model and its associated pre/post-processing components are housed separately. This strategy works well for isolation purposes when only a few bots are involved. However, for thousands of bots/models, it becomes **impractical** due to:
 
@@ -31,9 +31,9 @@ The most straightforward approach for serving ML models is deploying a **unique 
 &nbsp;
 - In addition to technical limitations, emerging business requirements may further compound service management overheads. When a new customer joins or an existing one leaves, new service deployments would need to be **launched** or existing ones **decommissioned** respectively. This adds to the complexity of managing the infrastructure.
 
-### Approach-2: Singular Web Service Deployment for All Bots
+### Approach 2: Singular Web Service Deployment for All Bots
 
-As we can see, the first method **requires** specific **improvements**, particularly in efficiency and maintenance. So, what if we loaded all Bots (their ML models and pre/post-processing components) within the context of a single service deployment with replicas? This could undoubtedly **enhance efficiency** as we wouldn’t need to instantiate ML and service libraries multiple times, thus eliminating the hassle of dealing with rolling update procedures for thousands of separate services simultaneously. But is this an all-round solution? Regrettably, it's not, as this approach introduces **bigger challenges**:
+As we can see, the first method **requires** specific **improvements**, particularly in efficiency and maintenance. So, what if we loaded all Bots (their ML models and pre/post-processing components) within the context of a single service deployment with replicas? This could undoubtedly **enhance efficiency** as we wouldn’t need to instantiate ML and service libraries multiple times, thus eliminating the hassle of dealing with rolling update procedures for thousands of separate services simultaneously. But is this an all-round solution? Unfortunately this is not a good solution either, as this approach introduces **bigger challenges**:
 
 - Depending on the total number of Bots, the **initialization** time of inference containers could be **excessively** **long**.
 - **Memory** usage of a single inference process might be **massive** as it needs to maintain numerous ML models and other custom components within the same processes.
@@ -49,6 +49,7 @@ Previous techniques, while having certain merits, also come with **distinct chal
 - Since we don't need to load all bots into a singular service scope, we're able to reap the benefits of **horizontal scalability** by simply introducing a new inference service deployment pool.
 - Courtesy of diversified service deployments, we can set distinct constraints and thresholds for the inference pipeline of **real-time** and **non-real time** bots. This also allows us to **independently scale** each pool.
 - As we initialize required ML libraries for each inference pool rather than for each Bot, we can utilize **memory** more **efficiently**.
+- It considerably **reduces** the **maintenance** overhead (compared to Approach 1) as we are now managing a smaller number of service deployments. This allows us to allocate resources and time more effectively.
 - Lastly, this approach provides enhanced isolation in terms of potential performance degradation due to unrelated bots. This aspect significantly enhances the overall performance and stability of each individual bot (w.r.t approach-2), leading to a smoother and more **reliable service**.
 
 #### So, how do we achieve this?
