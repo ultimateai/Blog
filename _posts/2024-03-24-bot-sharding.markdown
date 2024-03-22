@@ -2,18 +2,17 @@
 layout: post
 title:  "Scalability & Efficiency in ML Inference Systems"
 date: 2024-03-18
-description: "Scalability and efficiency present considerable challenges in the field of ML model serving systems, particularly when operating and serving a multitude of AI models concurrently. These aspects are vital for our operation as well, since we maintain thousands of AI models. In this post, we will discuss our approach to handling these tasks within our inference system."
+description: "Scalability and efficiency present considerable challenges in the field of ML model serving systems, particularly when operating and serving a multitude of AI models concurrently. These aspects are vital for our operation, as a customer support automation platform, we maintain thousands of AI models. In this post, we will discuss our approach to handling these tasks within our inference system."
 categories: [architecture, ml, scalability]
 preview_image: /assets/img/posts/bot-sharding-prev.png
 author: "Tunç Gültekin"
-link: "If this is a podcast link to where people can listen to it"
 ---
 
 ### ML Model Serving at Scale
 
-At Ultimate, in addition to LLMs and other Embedding models, our customers operate one or more bots. We train and serve custom ML models for each bot utilizing our proprietary model training and serving/inferencing systems. Apart from ML models, we need to maintain various pre/post-processing components including bot-specific regexes. As one could imagine, serving thousands of ML models along with their custom pre/post-processing components via web services is a challenging task regarding **efficiency** and **scalability**.
+At Ultimate, in addition to LLMs and other embedding models, our customers operate one or more bots. We train and serve custom ML models for each bot utilizing our proprietary model training and serving/inferencing systems. Apart from ML models, we need to maintain various pre/post-processing components including bot-specific regexes. As one could imagine, serving thousands of ML models along with their custom pre/post-processing components via web services is a challenging task regarding **efficiency** and **scalability**.
 
-There are several strategies for hosting/serving ML models (equivalent to Bots in the Ultimate setting). Each strategy offers its unique advantages and disadvantages in terms of scalability and efficiency. In this article, I will succinctly explain different techniques, and present our approach designed to mitigate the limitations of other methods.
+There are several strategies for hosting/serving ML models (equivalent to bots in the Ultimate setting). Each strategy offers its unique advantages and disadvantages in terms of scalability and efficiency. In this article, I will succinctly explain different techniques, and present our approach designed to mitigate the limitations of other methods.
 
 ### Approach 1: Distinct Web Service Deployments for Each Bot
 
@@ -33,18 +32,18 @@ The most straightforward approach for serving ML models is deploying a **unique 
 
 ### Approach 2: Singular Web Service Deployment for All Bots
 
-As we can see, the first method **requires** specific **improvements**, particularly in efficiency and maintenance. So, what if we loaded all Bots (their ML models and pre/post-processing components) within the context of a single service deployment with replicas? This could undoubtedly **enhance efficiency** as we wouldn’t need to instantiate ML and service libraries multiple times, thus eliminating the hassle of dealing with rolling update procedures for thousands of separate services simultaneously. But is this an all-round solution? Unfortunately this is not a good solution either, as this approach introduces **bigger challenges**:
+As we can see, the first method **requires** specific **improvements**, particularly in efficiency and maintenance. So, what if we loaded all bots (their ML models and pre/post-processing components) within the context of a single service deployment with replicas? This could undoubtedly **enhance efficiency** as we wouldn’t need to instantiate ML and service libraries multiple times, thus eliminating the hassle of dealing with rolling update procedures for thousands of separate services simultaneously. But is this an all-round solution? Unfortunately this is not a good solution either, as this approach introduces **bigger challenges**:
 
 - Depending on the total number of Bots, the **initialization** time of inference containers could be **excessively** **long**.
 - **Memory** usage of a single inference process might be **massive** as it needs to maintain numerous ML models and other custom components within the same processes.
-- Any issue in the custom data pre/post-processing routines of a Bot could potentially **harm** the **performance** of all other Bots, as they all share the same environment.
+- Any issue in the custom data pre/post-processing routines of a Bot could potentially **harm** the **performance** of all other bots, as they all share the same environment.
 - Most importantly, this approach allows for **only vertical scalability**, and the memory usage of inference processes will be **limited** by the capacity of the underlying VM. Therefore, the advantages of horizontal scalability cannot be leveraged. 
 
 Although this strategy seems to resolve the issue of maintenance overhead and enhances efficiency, it introduces serious problems related to scalability.
 
 
 ### Our Approach: Bot Sharding
-Previous techniques, while having certain merits, also come with **distinct challenges**. To address these issues, we at Ultimate have embraced a **hybrid approach**, appropriately named **Bot Sharding**. This approach carries the benefits of both prior techniques. As the name indicates, with Bot Sharding, we distribute similar Bots’ models across different inference service deployment pools and execute them solely within their respective pool. This method offers **numerous advantages**:
+Previous techniques, while having certain merits, also come with **distinct challenges**. To address these issues, we at Ultimate have embraced a **hybrid approach**, appropriately named **Bot Sharding**. This approach carries the benefits of both prior techniques. As the name indicates, with Bot Sharding, we distribute similar bots’ models across different inference service deployment pools and execute them solely within their respective pool. This method offers **numerous advantages**:
 - As we can **regulate** the number of bots in each inference service deployment pool, we can **adjust** our services **efficiently** in accordance with underlying hardware limits (memory, CPU, etc.) and maintain control over service initialization times.
 - Since we don't need to load all bots into a singular service scope, we're able to reap the benefits of **horizontal scalability** by simply introducing a new inference service deployment pool.
 - Courtesy of diversified service deployments, we can set distinct constraints and thresholds for the inference pipeline of **real-time** and **non-real time** bots. This also allows us to **independently scale** each pool.
