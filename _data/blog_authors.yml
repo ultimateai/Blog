@@ -3,6 +3,11 @@ andras:
     role: Senior AI Researcher
     linkedin: https://www.linkedin.com/in/andras-beke/
     picture: /assets/img/faces/faces_andras.jpeg
+barbara:
+    name: Bárbara Robertson
+    role: Senior Quality Engineer
+    linkedin: https://www.linkedin.com/in/barbararobertsonsantos/
+    picture: /assets/img/faces/faces_barbara.jpg
 demo:
     name: Demo Author
     linkedin: https://www.linkedin.com/company/ultimate.ai/mycompany/

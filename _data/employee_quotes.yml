@@ -3,6 +3,11 @@ andrada:
   role: Senior Machine Learning Engineer
   picture: /assets/img/faces/faces_andrada.jpg
   quote: Genuinely nice people and challenging technical problems inspire me to show up everyday and deliver my best work. Ultimate deeply cares about the people, finely crafted software and our customers.
+barbara:
+  name: Bárbara Robertson
+  role: Senior Quality Engineer
+  picture: /assets/img/faces/faces_barbara.jpg
+  quote: Ultimate is all about the cool challenges and the awesome people you get to solve them with. It’s a place where everyone’s voice matters, we support each other, and have fun along the way.
 mohamed:
   name: Mohamed Abdelazim
   role: Senior Backend Engineer
