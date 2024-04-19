@@ -12,7 +12,9 @@ Our journey with DevLake has represented a significant chapter in our quest for 
 
 DevLake emerged as a compelling choice in this context since it promised to amalgamate diverse data streams into Grafana. The aim was to deliver a comprehensive view of team performance, project progression, and operational efficiency, enabling informed strategic decisions for enhancement and growth.
 
+
 ![data sources](/assets/img/posts/devlake-data-sources.png )
+
 
 The decision to adopt DevLake was made after thoroughly comparing multiple solutions, like LinearB, Code Climate, Haystack, and Sleuth. We sought a system capable of offering deep, actionable insights into our workflow and output. DevLake’s capacity to integrate with numerous data sources to provide a cohesive view of team performance plus the fact that it is an open-source tool was desirable.
 
@@ -29,25 +31,35 @@ So after going through all the steps to make DevLake a reality for our teams, wh
 
 We started by setting up the DORA dashboard. Since Dora is a powerful industry standard, starting with it would provide holistic preliminary feedback on our velocity and productivity as we continue to address the issues we've faced and configure other boards.
 
+
 ![dora metrics](/assets/img/posts/devlake-dora-metrics.png )
+
 
 The benchmark table on the top and the usage of colours make it very easy to identify how well the team is doing and which things could use more of our attention. As mentioned before, we decided to use our Grafana, so we quickly imported the prebuilt graphs and made some minor changes. With Grafana being a versatile tool, anyone with some SQL knowledge can tweak the queries to suit their needs. 
 
+
 ![sql query](/assets/img/posts/devlake-sql-query.png )
+
 
 With that done, we took our time to build the other dashboards:
 
+
 ![dashboards list](/assets/img/posts/devlake-dashboard-list.png )
+
 
 Jira and GitHub dashboards are straightforward, giving us metrics like Issue Delivery Rate Over Time, which tells us the ratio of delivered requirements to all requirements across time, and the Total Number of New Pull Requests per Month
 
 The Engineering Overview dashboard comprehensively looks at things like On-time Delivery, Critical Defects Identified Over Month, PR Merged Over Month, and Unlinked PRs, providing indicators of a team's operational dynamics.
 
+
 ![engineering overview](/assets/img/posts/devlake-engineering-overview.png )
+
 
 Engineering Throughput and Cycle Time board sheds light on the team's speed by delivering insights into Cycle Time, Coding, Review, Pickup and Deploy Time, and on the team's quality of development by presenting information on PRs that have been merged without review, the size of the PRs and the depth of our PR reviews.
 
+
 ![engineering throughput and cycle time](/assets/img/posts/devlake-throughput-and-cycle-time.png )
+
 
 Finally, our last board is called Workflow Metrics. Created by our Platform team, this one centres on the quality of jobs for our different services, presenting the graphs: 
 
@@ -57,7 +69,9 @@ Finally, our last board is called Workflow Metrics. Created by our Platform team
 * Total Jobs x Failed jobs;
 * Percentage of Failed Jobs.
 
+
 ![percentage of failed jobs](/assets/img/posts/devlake-percentage-of-failed-jobs.png )
+
 
 With the ability to mix and match data sources easily and again, with the versatility of Grafana, DevLake makes it easy for the teams to utilise the prebuilt graphs and construct new ones that can support their needs. 
 
