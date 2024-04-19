@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Integrating DevLake for Enhanced Team Insight"
-date:   2024-04-19
+title: "Integrating DevLake for Enhanced Team Insight"
+date: 2024-04-19
 description: "In this post, we delve into both the challenges we encountered and the successes we achieved as we integrated DevLake into our tech stack. From navigating initial setup hurdles to achieving meaningful insights through customised dashboards, we'll cover how DevLake has contributed to our approach to data-driven decision-making and continuous improvement."
 categories: quality metrics 
 preview_image: /assets/img/posts/devlake-graph.png
