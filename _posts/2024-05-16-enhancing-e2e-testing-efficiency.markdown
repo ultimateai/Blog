@@ -8,9 +8,9 @@ preview_image: /assets/img/posts/e2e-efficiency_sharding_intro.png
 author: "Adekunle Johnson"
 ---
 
-In the early days of Ultimate, our testing tool was a paid AI solution used to manage suites, quickly anchor automated test and enable schedule and on-demand executions. As we grew, we knew this was not the tool to meet our demands and also we were not deriving the expected value from this solution. Each features such as adding more browsers comes at a cost, other common challenges includes:
+In the early days of Ultimate, our testing tool was a paid AI solution used to manage suites, quickly anchor automated tests and enable schedule and on-demand executions. As we grew, we knew this was not the tool to meet our demands and also we were not deriving the expected value from this solution. Each features such as adding more browsers comes at an extra cost, other common challenges includes:
 
-Execution Time: As our application expands so do the number of test cases increases, leading to longer execution times. In most cases, it took an average of 25 mins for execution of our full suites.
+Execution Time: As our application expands so do the number of test cases, leading to longer execution times. In most cases, it takes an average of 25 mins for execution of our full suites.
 
 Resource Utilization: Having concurrent execution put a strain on resources and causes test executions to hang or terminate especially with browser automation
 
@@ -18,17 +18,17 @@ Flakiness: This was a common issue faced by the team. Managing and troubleshooti
 
 ## Lets distribute the tests: Sharding
 
-Sharding in Playwright is a concept that allows test distribution across multiple instances, or “shards” thereby optimizing resource utilization and reducing overall execution time.
+Sharding in Playwright is a concept that allows test distribution across multiple instances, thereby optimizing resource utilization and reducing overall execution time.
 
 Playwright supports parallel execution of test files. To further scale our test execution, we execute these test files across multiple machines, called shards, thereby ensuring efficient utilization of resources while adapting to variations in test load.
 
-In Addition, by isolating test execution within individual shards, we enhance test stability and reliability. Failure in one of the shards will have no impact on the other.
+In addition, by isolating test execution within individual shards, we enhance test stability and reliability. Failure in one of the shards will have no impact on the other.
 
 ### CI setup
 
 Delving into how we use Playwright shard in Ultimate. We create feature-based suites, which are small subset of tests related to the same features, as test files. 
 
-In Github Actions, we use jobs for sharding tests. The workflow runs the tests on self-hosted runners, `qe-runners`, the shards, having chromium browsers pre-installed (to speed up the test). Also, we use a matrix strategy for executing the tests in parallel across the different shards.
+In Github Actions, we use jobs for sharding tests. The workflow runs the tests on self-hosted runners, `qe-runners`, the shards, having chromium browsers pre-installed (to speed up the test). Also, we use a matrix strategy for executing the tests in parallel across the different shards. In this case, it's set up to run the tests on the chromium project, with 5 different shards (shardIndex: [1, 2, 3, 4, 5]).
 
 ```yaml
 jobs:
@@ -67,8 +67,9 @@ jobs:
           retention-days: 1
 ```
 
-Next, each of these shards generate its reports, so for ease of use we merge the reports. We get the merged (zipped) report from Github and upload to our Google Cloud Storage to free up Github resources.
-*Note:* we only retain the artifact in github for a day for cost effectiveness, but we upload the artifacts in the Google Cloud bucket for longer period.
+Next, each of these shards generate its reports, so for ease of use we merge the reports. We get the merged (zipped) file from Github and upload to our Google Cloud Storage to free up Github resources. Also we send test summary as slack notification. 
+
+*Note:* we only retain the artifact in github for a day for cost effectiveness, and we upload the artifacts in the Google Cloud bucket for a longer period.
 
 ```yaml
 merge-reports:
@@ -125,7 +126,20 @@ merge-reports:
           destination: ${{ env.BUCKET_NAME }}/${{ github.event.repository.name }}/${{ env.CURRENT_DATE }}/scheduled/
         if: always()
         id: upload_to_bucket
+
+      - name: Post test run summary to slack
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          REPORT_LINK: "https://report.XXXXXXXX/${{ env.CURRENT_DATE }}/${{ github.run_id}}/playwright-report/index.html"
+          TYPE: 'scheduled'
+          STARTED_BY: ${{ github.actor }}
+        run: |
+          npx playwright-slack-report --config="${GITHUB_WORKSPACE}/cli_config.json" --json-results="${GITHUB_WORKSPACE}/results.json"
 ```
+
+Notification:
+
+![Slack Alert ](../assets/img/posts/e2e-efficiency_slack_alert.png)
 
 Finally, we provide the link to the Artifact in Google Cloud, this `announce` job runs after the `merge-reports` job.
 
@@ -153,7 +167,7 @@ Artifacts:
 As we can see, with sharding the maximum execution time for the tests was just over 3 mins, while the overall duration for the whole job is approximately 7 mins rather than 25 mins with previous automation tool.
 
 Jobs Summary:
- 
+
 ![Workflow Job Summary](../assets/img/posts/e2e-efficiency_job_summary.png)
 
 ### Conclusion
