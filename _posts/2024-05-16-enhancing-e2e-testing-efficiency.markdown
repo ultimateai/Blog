@@ -8,7 +8,11 @@ preview_image: /assets/img/posts/e2e-efficiency_sharding_intro.png
 author: "Adekunle Johnson"
 ---
 
-In the early days of Ultimate, our testing tool was a paid AI solution used to manage suites, quickly anchor automated tests and enable schedule and on-demand executions. As we grew, we knew this was not the tool to meet our demands and also we were not deriving the expected value from this solution. Each features such as adding more browsers comes at an extra cost, other common challenges includes:
+In the early days of Ultimate, our testing tool was a paid AI solution used to manage suites, quickly anchor automated tests and enable schedule and on-demand executions. As we grew, we knew this was not the tool to meet our demands and also we were not deriving the expected value from this solution. Each features such as adding more browsers comes at an extra cost.
+
+Likewise, in the face of a relentless tide of new features and enhancements, our lean quality engineering team found it increasingly challenging to keep pace and anchor tests accordingly. It became evident that we needed a tool that not only appeals to developers but also fostered a shared responsibility for product quality.
+
+Other known challenges includes:
 
 Execution Time: As our application expands so do the number of test cases, leading to longer execution times. In most cases, it takes an average of 25 mins for execution of our full suites.
 
@@ -169,6 +173,9 @@ As we can see, with sharding the maximum execution time for the tests was just o
 Jobs Summary:
 
 ![Workflow Job Summary](../assets/img/posts/e2e-efficiency_job_summary.png)
+
+
+To help promote the shift left approach, we have included the workflow to trigger on every PR raised. This allows the developers to run comprehensive tests early and often, thereby identifying and resolving issues promptly.
 
 ### Conclusion
 
